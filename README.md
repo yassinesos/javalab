@@ -1,6 +1,6 @@
 ## Introduction à la programmation Java
 
-L'ensemble des documents provient du cours d'introduction à la programmation Java donnés de 1996 à 2007 en BTS Informatique industrielle / IRIS.
+L'ensemble des documents provient du cours d'introduction à la programmation Java présenté de 1996 à 2007 en BTS Informatique industrielle / IRIS / SNIR. 
 
 ### Licences
 
