@@ -75,6 +75,9 @@ public class Troncature {
 
         if (nbDecimales != 0) {
             resultat = resultat + "." + parties[1].substring(0, nbDecimales);
+        } else {
+            if (x < 0 && x > -1)
+                resultat = resultat.substring(1);
         }
         return resultat;
     }
