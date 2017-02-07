@@ -27,7 +27,7 @@ import java.math.BigDecimal;
 public class Troncature {
 	
 	/**
-	 * Troncature en utilisant astucieusement @code Math.pow et @code Math.floor  
+	 * Troncature en utilisant astucieusement {@see Math.pow} et {@see Math.floor}  
 	 * @param x Le nombre devant être tronqué
 	 * @param nbDecimales Nombre de décimales conservées par la troncature
 	 * @return Nombre tronqué sous forme d'une chaîne de caractères 
@@ -42,7 +42,7 @@ public class Troncature {
 	}
 	
 	/**
-	 * Troncature en utilisant les propriétés des @code BigDecimal. 
+	 * Troncature en utilisant les propriétés des {@see BigDecimal}. 
 	 * @param x Le nombre devant être tronqué
 	 * @param nbDecimales Nombre de décimales conservées par la troncature
 	 * @return Nombre tronqué sous forme d'une chaîne de caractères 
@@ -54,7 +54,7 @@ public class Troncature {
 	}
 	
 	/**
-	 * Troncature en utilisant les propriétés des @code String. 
+	 * Troncature en utilisant les propriétés des {@see String}. 
 	 * @param x Le nombre devant être tronqué
 	 * @param nbDecimales Nombre de décimales conservées par la troncature
 	 * @return Nombre tronqué sous forme d'une chaîne de caractères 
