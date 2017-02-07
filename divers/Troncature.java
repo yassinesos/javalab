@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Alain Lebret.
+ * Copyright 2017 fouroche74.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import java.util.StringTokenizer;
 import java.text.DecimalFormat;
 import java.math.RoundingMode;
@@ -22,15 +23,17 @@ import java.math.BigDecimal;
  * Cette "classe" (en est-ce vraiment une au sens objet du terme ?) propose 
  * trois manières simples de tronquer un double.
  * @author A. Lebret 
- * @date 01/2017
+ * @version 1.0 (01/2017)
  */ 
 public class Troncature {
 	
 	/**
-	 * Troncature en utilisant astucieusement {@see Math.pow} et {@see Math.floor}  
+	 * Troncature en utilisant astucieusement {@code Math.floor} et
+         * {@code Math.pow}.
 	 * @param x Le nombre devant être tronqué
 	 * @param nbDecimales Nombre de décimales conservées par la troncature
-	 * @return Nombre tronqué sous forme d'une chaîne de caractères 
+	 * @return Le nombre tronqué sous forme d'une chaîne de caractères 
+         * @see java.lang.Math
 	 */ 
 	public static String tronquer1(final double x, final int nbDecimales) {
 		int multiplicateur;
@@ -42,22 +45,24 @@ public class Troncature {
 	}
 	
 	/**
-	 * Troncature en utilisant les propriétés des {@see BigDecimal}. 
+	 * Troncature en utilisant les propriétés des {@code BigDecimal}.
 	 * @param x Le nombre devant être tronqué
 	 * @param nbDecimales Nombre de décimales conservées par la troncature
-	 * @return Nombre tronqué sous forme d'une chaîne de caractères 
+	 * @return Le nombre tronqué sous forme d'une chaîne de caractères 
+         * @see java.math.BigDecimal
 	 */ 	
 	public static String tronquer2(final double x, final int nbDecimales) {
 		BigDecimal bd = new BigDecimal(String.valueOf(x)).setScale(nbDecimales, 
-			BigDecimal.ROUND_DOWN);
+										BigDecimal.ROUND_DOWN);
 	    return bd.toPlainString();
 	}
 	
 	/**
-	 * Troncature en utilisant les propriétés des {@see String}. 
+	 * Troncature en utilisant les propriétés des {@code String}. 
 	 * @param x Le nombre devant être tronqué
 	 * @param nbDecimales Nombre de décimales conservées par la troncature
-	 * @return Nombre tronqué sous forme d'une chaîne de caractères 
+	 * @return Le nombre tronqué sous forme d'une chaîne de caractères 
+         * @see java.lang.String
 	 */ 	
 	public static String tronquer3(final double x, final int nbDecimales) {
 		String[] parties = (String.valueOf(x)).split("\\.");
@@ -87,5 +92,5 @@ public class Troncature {
 			     "doit être un double et le deuxième " + 
 			     "un entier positif ou nul");
 		}
-  }
+    }
 }
