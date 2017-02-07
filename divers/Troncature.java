@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 
 /**
  * Cette "classe" (en est-ce vraiment une au sens objet du terme ?) propose 
- * deux manières simples de tronquer un double.
+ * trois manières simples de tronquer un double.
  * @author A. Lebret 
  * @date 01/2017
  */ 
