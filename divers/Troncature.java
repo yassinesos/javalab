@@ -49,7 +49,7 @@ public class Troncature {
 	 */ 	
 	public static String tronquer2(final double x, final int nbDecimales) {
 		BigDecimal bd = new BigDecimal(String.valueOf(x)).setScale(nbDecimales, 
-										BigDecimal.ROUND_DOWN);
+			BigDecimal.ROUND_DOWN);
 	    return bd.toPlainString();
 	}
 	
