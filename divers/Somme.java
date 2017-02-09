@@ -37,4 +37,3 @@ public class Somme {
 		System.out.println("Somme = " + somme);
 	}
 }
-
