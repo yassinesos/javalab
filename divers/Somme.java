@@ -31,7 +31,7 @@ public class Somme {
 			try {
 				somme += Integer.valueOf(args[i]);
 			} catch(NumberFormatException e) {
-				System.err.println("Attention, \"" + args[i] + "\" n'est pas un nombre !");
+				System.err.println("Attention, \"" + args[i] + "\" n'est pas un nombre entier !");
 			}
 		}
 		System.out.println("Somme = " + somme);
