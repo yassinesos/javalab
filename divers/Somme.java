@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 fouroche74.
+ * Copyright 2017 Alain Lebret.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,10 +24,9 @@
 
 public class Somme {
 	public static void main(String[] args) {
-		int i;
 		int somme = 0;
 
-		for (i = 0; i< args.length; i++) {
+		for (int i = 0; i< args.length; i++) {
 			try {
 				somme += Integer.valueOf(args[i]);
 			} catch(NumberFormatException e) {
