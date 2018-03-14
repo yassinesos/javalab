@@ -1,6 +1,6 @@
 ## Introduction à la programmation Java
 
-L'ensemble des documents provient du cours d'introduction à la programmation Java présenté de 1996 à 2007 en BTS Informatique industrielle / IRIS / SNIR. 
+L'ensemble des documents provient du cours d'introduction à la programmation Java présenté de 1996 à 2007 en BTS Informatique industrielle / IRIS / SNIR. Le répertoire ```divers``` contient quelques codes associés aux TP Java dans lesquels j'interviens à l'ENSICAEN depuis 2016. 
 
 ### Licences
 
@@ -12,7 +12,7 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 
 ## Programming in Java
 
-All the documents come from my course presented from 1996 to 2007.
+All the documents come from my course presented from 1996 to 2007. The folder ```divers``` contains some Java codes from laboratory works at the ENSICAEN (since 2016). 
 
 ### Licensing
 
