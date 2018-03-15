@@ -20,8 +20,7 @@
  * limitations under the License.
  *
  */
-package tp2;
-
+package tp4;
 
 /**
  * Définie une opération sous forme de chaine de caractères. Permet d'introduire la
@@ -63,6 +62,6 @@ public class Operation {
      * @param operation chaîne de caractères décrivant l'opération à effectuer
      */
     public void setOperation(String operation) {
-            this.operation = operation;
+        this.operation = operation;
     }
 } // Fin Operation

@@ -20,8 +20,7 @@
  * limitations under the License.
  *
  */
-package tp2;
-
+package tp3;
 
 /**
  * Définie une opération sous forme de chaine de caractères. Permet d'introduire la

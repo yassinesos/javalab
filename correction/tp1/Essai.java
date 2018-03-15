@@ -1,10 +1,10 @@
 /*
- * Laboratory work in Java programming.
+ * Java programming laboratory work.
  *
  * Copyright (C) 2002-2018 Alain Lebret (alain.lebret@ensicaen.fr)
  * ENSICAEN
  * 6 Bd Maréchal Juin
- * 4000 Caen, France
+ * 14000 Caen, France
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

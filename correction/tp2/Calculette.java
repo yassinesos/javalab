@@ -4,7 +4,7 @@
  * Copyright (C) 2002-2018 Alain Lebret (alain.lebret@ensicaen.fr)
  * ENSICAEN
  * 6 Bd Maréchal Juin
- * 4000 Caen, France
+ * 14000 Caen, France
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,7 +59,7 @@ public class Calculette {
         } else {
             try {
                 operation.resoudre(uneOperation);
-            } catch (OperateurException e) {
+            } catch (OperationException e) {
                 System.err.println(e.toString());
             }
         }

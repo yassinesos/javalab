@@ -20,8 +20,9 @@
  * limitations under the License.
  *
  */
-package tp2;
+package tp3;
 
+import tp2.Calculette;
 import util.Lecture;
 
 /**
@@ -32,7 +33,7 @@ import util.Lecture;
  *   System : contient plusieurs attributs et méthodes utiles au dialogue
  *            avec le system d'exploitation.
  *   </pre>
- *   @version 1.2
+ *   @version 1.3
  *   @author Alain Lebret
  */
 public class Essai {
@@ -44,7 +45,7 @@ public class Essai {
         String calcul;
 
         while (true) {
-            System.out.println("\nCalculette - version 1.2");
+            System.out.println("\nCalculette - version 1.3");
             System.out.println("------------------------");
             System.out.println("\"Entrer une opération sous la forme :\\noperande1 <operateur> operande2 (fin pour quitter)\"");
             System.out.print(">> ");

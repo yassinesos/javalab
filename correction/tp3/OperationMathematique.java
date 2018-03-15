@@ -20,7 +20,10 @@
  * limitations under the License.
  *
  */
-package tp2;
+package tp3;
+
+import tp2.OperationException;
+import tp2.Operation;
 
 /**
  * Définie une opération mathématique de la forme <code>operande1 operateur operande2</code>.
@@ -64,7 +67,7 @@ public class OperationMathematique extends Operation {
      *
      * @param operation chaîne de caractères décrivant l'opération à effectuer
      * @see java.util.StringTokenizer
-     * @see java.lang.Double
+     * @see Double
      */
     public void resoudre(String operation) throws OperationException {
         if (operation == null) {

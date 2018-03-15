@@ -20,60 +20,40 @@
  * limitations under the License.
  *
  */
-package tp1;
+package tp4;
 
-import java.util.StringTokenizer;
+import java.io.Serializable;
 
 /**
- * Calculette syntaxique chargée d'analyser une chaîne de caractères spécifiant le calcul
- * à réaliser. Les chaînes de caractères doivent respecter la forme suivante : <br />
- * <code>operande1</code> <code>operation</code> <code>operande2</code>.<br />
- * La chaîne de caractères <code>"fin"</code> permet de quitter l'application par appel de
- * la méthode <code>System.exit(-1)</code>.  Elle utilise :
+ * Définie une opération mathématique de la forme <code>operande1 operateur operande2</code>.
+ * Elle utilise :
  * <pre>
  * Double          : encapsule le type primitif <i>double</i>.
  * String          : représente une chaîne de caractères dont le contenu ne peut
  * être modifié.
  * StringTokenizer : permet de découper une chaîne de caractères en éléments de base
  * base suivant des séparateurs précis.
- * System          : contient plusieurs attributs et méthodes utiles au dialogue
- * avec le system d'exploitation.
  * </pre>
  *
  * @author Alain Lebret
- * @version 1.1
+ * @version 1.0
  */
-public class Calculette {
-    /**
-     * opérande 1 de la calculette
-     */
-    private double operande1;
-
-    /**
-     * opérande 2 de la calculette
-     */
-    private double operande2;
-
-    /**
-     * opération effectuée sur la calculette
-     */
-    private char operateur;
-
+public class OperationMathematique extends Operation implements Serializable {
     /**
      * résultat de l'opération
      */
     private double resultat;
 
     /**
-     * Constructeur par défaut. Celui-ci initialise les attributs de la classe.
+     * Constructeur par défaut.
      */
-    public Calculette() {
-        operande1 = operande2 = resultat = 0.0;
-        operateur = '+';
+    public OperationMathematique() {
+        super(); // appel du constructeur parent
+        this.resultat = 0.0;
     }
 
     /**
-     * Effectue le calcul souhaité : operande1 operation operande2. Une utilisation de
+     * Résolution de l'Opération souhaitée : operande1 &lt;operation&gt; operande2. Une utilisation de
      * la classe <code>StringTokenizer</code> permet de découper une chaîne en sous-chaînes par
      * l'intermédiaire de sa méthode <code>nextToken()</code>. Ces sous-chaînes sont alors
      * transformées en objets "enveloppes" (Double, Character, ...), phase intermédiaire avant
@@ -84,37 +64,46 @@ public class Calculette {
      * <code><b>Double</b></code> avec sa méthode <code><b>double</b> parseDouble(String s)</code><br>
      * <code><b>String</b></code> avec sa méthode <code><b>char</b> charAt(<b>int</b> index)</code></blockquote>
      *
-     * @param op chaîne de caractères décrivant l'opération à effectuer
+     * @param operation chaîne de caractères décrivant l'opération à effectuer
      * @see java.util.StringTokenizer
      * @see java.lang.System
      * @see java.lang.Double
      */
-    public void calculer(String op) {
-        if (op.equals("fin")) {
-            System.exit(-1);
-        } else {
-            StringTokenizer t = new StringTokenizer(op);
+    public void resoudre(String operation) throws OperationException {
+        double operande1 = 0, operande2 = 0;
+        char operateur;
 
-            operande1 = Double.parseDouble(t.nextToken());
-            operateur = (t.nextToken()).charAt(0);
-            operande2 = Double.parseDouble(t.nextToken());
+        java.util.StringTokenizer analyseur = new java.util.StringTokenizer(operation);
+        try {
+            operande1 = Double.parseDouble(analyseur.nextToken());
+        } catch (NumberFormatException e) {
+            this.setOperation("Format invalide");
+        }
+        operateur = (analyseur.nextToken()).charAt(0);
+        try {
+            operande2 = Double.parseDouble(analyseur.nextToken());
+        } catch (NumberFormatException e) {
+            this.setOperation("Format invalide");
+        }
 
-            switch (operateur) {
-                case '+':
-                    resultat = operande1 + operande2;
-                    break;
-                case '-':
-                    resultat = operande1 - operande2;
-                    break;
-                case '/':
-                    resultat = operande1 / operande2;
-                    break;
-                case '*':
-                    resultat = operande1 * operande2;
-                    break;
-                default:
-                    resultat = Double.NaN;
-            }
+        this.setOperation(operation);
+
+        switch (operateur) {
+            case '+':
+                resultat = operande1 + operande2;
+                break;
+            case '-':
+                resultat = operande1 - operande2;
+                break;
+            case '/':
+                resultat = operande1 / operande2;
+                break;
+            case '*':
+                resultat = operande1 * operande2;
+                break;
+            default:
+                resultat = Double.NaN;
+                throw new OperationException("Opérateur non reconnu");
         }
     }
 
@@ -125,6 +114,6 @@ public class Calculette {
      * @return chaîne de caractères représentant le calcul effectué
      */
     public String toString() {
-        return "\n" + operande1 + " " + operateur + " " + operande2 + " =  " + resultat + "\n";
+        return this.getOperation() + " = " + resultat;
     }
-} // Fin Calculette
+} // Fin OperationMathematique
