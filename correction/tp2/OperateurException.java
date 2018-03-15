@@ -1,6 +1,5 @@
 /*
- * SVEN is an open source Java library for machine learning, image analysis
- * and computer vision educational projects.
+ * Java programming laboratory work.
  *
  * Copyright (C) 2002-2018 Alain Lebret (alain.lebret@ensicaen.fr)
  * ENSICAEN
