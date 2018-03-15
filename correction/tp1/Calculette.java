@@ -112,6 +112,8 @@ public class Calculette {
                 case '*':
                     resultat = operande1 * operande2;
                     break;
+                default:
+                    resultat = Double.NaN;
             }
         }
     }

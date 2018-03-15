@@ -43,16 +43,18 @@ public class Essai {
         Calculette calculette = new Calculette();
         String calcul;
 
-        do {
+        while (true) {
             System.out.println("\nCalculette - version 1.1");
             System.out.println("------------------------");
             System.out.println("Entrer une opération sous la forme :\noperande1 <operateur> operande2");
             System.out.print(">> ");
 
             calcul = Lecture.S();
+            if (calcul.equals("fin")) {
+                return;
+            }
             calculette.calculer(calcul);
-
             System.out.println(calculette.toString());
-        } while (!calcul.equals("fin"));
+        }
     }
 } // Fin Essai
