@@ -62,11 +62,7 @@ public class Operation {
      *
      * @param operation chaîne de caractères décrivant l'opération à effectuer
      */
-    public void setOperation(String operation) throws OperateurException {
-//        if (operation.matches("[+-/\\*]")) {
+    public void setOperation(String operation) {
             this.operation = operation;
-//        } else {
-//            throw new OperateurException("Opérateur non reconnu");
-//        }
     }
 } // Fin Operation

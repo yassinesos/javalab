@@ -27,9 +27,9 @@ import util.Lecture;
 /**
  *   Classe d'essai pour la calculette. Elle utilise :
  *   <pre>
- *   String : Représente une chaîne de caractères dont le contenu ne
+ *   String : représente une chaîne de caractères dont le contenu ne
  *            peut être modifié.
- *   System : Contient plusieurs attributs et méthodes utiles au dialogue
+ *   System : contient plusieurs attributs et méthodes utiles au dialogue
  *            avec le system d'exploitation.
  *   </pre>
  *   @version 1.2
@@ -43,15 +43,18 @@ public class Essai {
         Calculette calculette = new Calculette();
         String calcul;
 
-        do {
+        while (true) {
             System.out.println("\nCalculette - version 1.2");
             System.out.println("------------------------");
-            System.out.println("Entrer une operation sous la forme :\noperande1 <operateur> operande2");
+            System.out.println("Entrer une opération sous la forme :\noperande1 <operateur> operande2");
             System.out.print(">> ");
 
             calcul = Lecture.S();
+            if (calcul.equals("fin")) {
+                return;
+            }
             calculette.calculer(calcul);
             System.out.println(calculette.toString());
-        } while (!calcul.equals("fin"));
+        }
     }
 } // Fin Essai
