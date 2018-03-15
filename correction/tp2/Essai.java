@@ -46,7 +46,7 @@ public class Essai {
         while (true) {
             System.out.println("\nCalculette - version 1.2");
             System.out.println("------------------------");
-            System.out.println("Entrer une opération sous la forme :\noperande1 <operateur> operande2");
+            System.out.println("\"Entrer une opération sous la forme :\\noperande1 <operateur> operande2 (fin pour quitter)\"");
             System.out.print(">> ");
 
             calcul = Lecture.S();
