@@ -101,9 +101,9 @@ public class Calculette {
 
         String[] operandes = operationSansEspaces.split(motif);
         for (int i = 0; i < operateurs.length(); i++) {
-            char ope = operateurs.charAt(i);
-            if (operationSansEspaces.indexOf(ope) != -1) {
-                operateur = String.valueOf(ope).charAt(0);
+            char operateurATester = operateurs.charAt(i);
+            if (operationSansEspaces.indexOf(operateurATester) != -1) {
+                operateur = String.valueOf(operateurATester).charAt(0);
                 break;
             }
         }
@@ -119,6 +119,7 @@ public class Calculette {
     public void calculer(String operation) {
 
         decomposerAvecScanner(operation);
+        //decomposerAvecStringEtSplit(operation);
 
         switch (operateur) {
             case '+':
