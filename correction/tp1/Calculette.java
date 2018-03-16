@@ -81,7 +81,7 @@ public class Calculette {
     private void decomposerAvecScanner(String operation) {
         String motif = "([ +\\-*/])";
         String operationSansEspaces = operation.replaceAll(" ", "");
-        Scanner sc = new Scanner(operationSansEspaces.replaceAll(" ", ""));
+        Scanner sc = new Scanner(operationSansEspaces);
 
         sc.useDelimiter(Pattern.compile(motif));
         operande1 = Double.parseDouble(sc.next());
