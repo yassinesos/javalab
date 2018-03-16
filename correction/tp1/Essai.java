@@ -25,15 +25,16 @@ package tp1;
 import util.Lecture;
 
 /**
- *   Classe d'essai pour la calculette. Elle utilise :
- *   <pre>
+ * Classe d'essai pour la calculette. Elle utilise :
+ * <pre>
  *   String : représente une chaîne de caractères dont le contenu ne
  *            peut être modifié.
  *   System : contient plusieurs attributs et méthodes utiles au dialogue
  *            avec le system d'exploitation.
  *   </pre>
- *   @version 1.1
- *   @author Alain Lebret
+ *
+ * @author Alain Lebret
+ * @version 1.1
  */
 public class Essai {
     /**

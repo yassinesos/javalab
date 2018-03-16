@@ -4,7 +4,7 @@
  * Copyright (C) 2002-2018 Alain Lebret (alain.lebret@ensicaen.fr)
  * ENSICAEN
  * 6 Bd Maréchal Juin
- * 14000 Caen, France
+ * 4000 Caen, France
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,8 @@
  */
 package tp1;
 
-import java.util.StringTokenizer;
+import java.util.Scanner;
+import java.util.regex.Pattern;
 
 /**
  * Calculette syntaxique chargée d'analyser une chaîne de caractères spécifiant le calcul
@@ -73,48 +74,67 @@ public class Calculette {
     }
 
     /**
-     * Effectue le calcul souhaité : operande1 operation operande2. Une utilisation de
-     * la classe <code>StringTokenizer</code> permet de découper une chaîne en sous-chaînes par
-     * l'intermédiaire de sa méthode <code>nextToken()</code>. Ces sous-chaînes sont alors
-     * transformées en objets "enveloppes" (Double, Character, ...), phase intermédiaire avant
-     * de pouvoir récupérer la valeur des types de base associés.<br>
-     * Classes utilisées : <br><blockquote>
-     * <code><b>StringTokenizer</b></code> avec sa méthode <code>String nextToken()</code><br>
-     * <code><b>System</b></code> avec sa méthode <code><b>void</b> exit(<b>int</b> nb)</code><br>
-     * <code><b>Double</b></code> avec sa méthode <code><b>double</b> parseDouble(String s)</code><br>
-     * <code><b>String</b></code> avec sa méthode <code><b>char</b> charAt(<b>int</b> index)</code></blockquote>
+     * Décompose l'opération en utilisant un Scanner.
      *
-     * @param op chaîne de caractères décrivant l'opération à effectuer
-     * @see java.util.StringTokenizer
-     * @see java.lang.System
-     * @see java.lang.Double
+     * @param operation Opération mathématique à réaliser (+, -, * et /)
      */
-    public void calculer(String op) {
-        if (op.equals("fin")) {
-            System.exit(-1);
-        } else {
-            StringTokenizer t = new StringTokenizer(op);
+    private void decomposerAvecScanner(String operation) {
+        String motif = "([ +\\-*/])";
+        String operationSansEspaces = operation.replaceAll(" ", "");
+        Scanner sc = new Scanner(operationSansEspaces.replaceAll(" ", ""));
 
-            operande1 = Double.parseDouble(t.nextToken());
-            operateur = (t.nextToken()).charAt(0);
-            operande2 = Double.parseDouble(t.nextToken());
+        sc.useDelimiter(Pattern.compile(motif));
+        operande1 = Double.parseDouble(sc.next());
+        operateur = sc.findInLine(motif).charAt(0);
+        operande2 = Double.parseDouble(sc.next());
+    }
 
-            switch (operateur) {
-                case '+':
-                    resultat = operande1 + operande2;
-                    break;
-                case '-':
-                    resultat = operande1 - operande2;
-                    break;
-                case '/':
-                    resultat = operande1 / operande2;
-                    break;
-                case '*':
-                    resultat = operande1 * operande2;
-                    break;
-                default:
-                    resultat = Double.NaN;
+    /**
+     * Décompose l'opération en utilisant la méthode split d'un String.
+     *
+     * @param operation Opération mathématique à réaliser (+, -, * et /)
+     */
+    private void decomposerAvecStringEtSplit(String operation) {
+        String motif = "([ +\\-*/])";
+        String operateurs = "+-*/";
+        String operationSansEspaces = operation.replaceAll(" ", "");
+
+        String[] operandes = operationSansEspaces.split(motif);
+        for (int i = 0; i < operateurs.length(); i++) {
+            char ope = operateurs.charAt(i);
+            if (operationSansEspaces.indexOf(ope) != -1) {
+                operateur = String.valueOf(ope).charAt(0);
+                break;
             }
+        }
+        operande1 = Double.parseDouble(operandes[0]);
+        operande2 = Double.parseDouble(operandes[1]);
+    }
+
+    /**
+     * Effectue le calcul souhaité en fonction de l'opération donnée.
+     *
+     * @param operation Opération mathématique à réaliser (+, -, * et /)
+     */
+    public void calculer(String operation) {
+
+        decomposerAvecScanner(operation);
+
+        switch (operateur) {
+            case '+':
+                resultat = operande1 + operande2;
+                break;
+            case '-':
+                resultat = operande1 - operande2;
+                break;
+            case '/':
+                resultat = operande1 / operande2;
+                break;
+            case '*':
+                resultat = operande1 * operande2;
+                break;
+            default:
+                resultat = Double.NaN;
         }
     }
 
