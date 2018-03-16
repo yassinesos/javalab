@@ -23,21 +23,21 @@
 package tp4;
 
 /**
- * Amélioration de la calculette du TP n°3 avec gestion d'un tableau des 5 dernières
+ * Amélioration de la calculette du TP n°2 avec gestion d'un tableau des n dernières
  * opérations effectuées. Elle utilise :
  * <pre>
- *   String : Représente une chaîne de caractères dont le contenu ne
+ *   String : représente une chaîne de caractères dont le contenu ne
  *            peut être modifié.
- *   System : Contient plusieurs attributs et méthodes utiles au dialogue
+ *   System : contient plusieurs attributs et méthodes utiles au dialogue
  *            avec le system d'exploitation.
  *   </pre>
  *
  * @author Alain Lebret
- * @version 1.4
+ * @version 1.3
  */
 public class Calculette {
     /**
-     * opération à effectuer
+     * opérations à effectuer
      */
     protected OperationMathematique[] operations; // protected pour les classes dérivées
 
@@ -60,21 +60,16 @@ public class Calculette {
      * Effectue le calcul souhaité
      */
     public void calculer(String uneOperation) {
-        if (uneOperation.equals("fin")) {
-            System.exit(-1);
-        } else {
-            if (compteur == 4) {
-                compteur = 0;
-            }
-            operations[compteur] = new OperationMathematique();
-            try {
-                operations[compteur].resoudre(uneOperation);
-            } catch (OperationException e) {
-                e.printStackTrace();
-            }
-
-            compteur++;
+        if (compteur % 5 == 0) {
+            compteur = 0;
         }
+        operations[compteur] = new OperationMathematique();
+        try {
+            operations[compteur].resoudre(uneOperation);
+        } catch (OperationException e) {
+            e.printStackTrace();
+        }
+        compteur++;
     }
 
     /**
@@ -85,12 +80,16 @@ public class Calculette {
      * @see java.lang.StringBuffer
      */
     public String toString() {
-        StringBuilder liste = new StringBuilder("");
+        StringBuffer liste = new StringBuffer("");
 
-        for (int i = 0; i < compteur; i++) {
-            liste.append(operations[i].toString() + "\n");
+        for (int i = 0; i < operations.length; i++) {
+            if (operations[i] != null) {
+                liste.append(operations[i].toString() + "\n");
+            } else {
+                liste.append("Undefined\n");
+            }
         }
 
         return liste.toString();
     }
-} // Fin Calculette 
+} // Fin Calculette
