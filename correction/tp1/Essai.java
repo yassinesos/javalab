@@ -22,16 +22,14 @@
  */
 package tp1;
 
-import util.Lecture;
+import java.util.Scanner;
 
 /**
- * Classe d'essai pour la calculette. Elle utilise :
- * <pre>
- *   String : représente une chaîne de caractères dont le contenu ne
- *            peut être modifié.
- *   System : contient plusieurs attributs et méthodes utiles au dialogue
- *            avec le system d'exploitation.
- *   </pre>
+ * Calculette syntaxique chargée d'analyser une chaîne de caractères spécifiant le calcul
+ * à réaliser. Les chaînes de caractères doivent respecter la forme suivante : <br />
+ * <code>operande1</code> <code>operation</code> <code>operande2</code>.<br />
+ * La chaîne de caractères <code>"fin"</code> permet de quitter l'application par appel de
+ * la méthode <code>System.exit(-1)</code>.
  *
  * @author Alain Lebret
  * @version 1.1
@@ -42,6 +40,8 @@ public class Essai {
      */
     public static void main(String[] argument) {
         Calculette calculette = new Calculette();
+        Scanner scanner = new Scanner(System.in);
+
         String calcul;
 
         while (true) {
@@ -50,7 +50,7 @@ public class Essai {
             System.out.println("Entrer une opération sous la forme :\noperande1 <operateur> operande2 (fin pour quitter)");
             System.out.print(">> ");
 
-            calcul = Lecture.S();
+            calcul = scanner.nextLine();
             if (calcul.equals("fin")) {
                 return;
             }

@@ -28,18 +28,7 @@ import java.util.regex.Pattern;
 /**
  * Calculette syntaxique chargée d'analyser une chaîne de caractères spécifiant le calcul
  * à réaliser. Les chaînes de caractères doivent respecter la forme suivante : <br />
- * <code>operande1</code> <code>operation</code> <code>operande2</code>.<br />
- * La chaîne de caractères <code>"fin"</code> permet de quitter l'application par appel de
- * la méthode <code>System.exit(-1)</code>.  Elle utilise :
- * <pre>
- * Double          : encapsule le type primitif <i>double</i>.
- * String          : représente une chaîne de caractères dont le contenu ne peut
- * être modifié.
- * StringTokenizer : permet de découper une chaîne de caractères en éléments de base
- * base suivant des séparateurs précis.
- * System          : contient plusieurs attributs et méthodes utiles au dialogue
- * avec le system d'exploitation.
- * </pre>
+ * <code>operande1</code> <code>operation</code> <code>operande2</code>.
  *
  * @author Alain Lebret
  * @version 1.1

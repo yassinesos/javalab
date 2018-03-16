@@ -22,24 +22,20 @@
  */
 package tp2;
 
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 /**
- * Amélioration de la calculette du TP no 1 avec utilisation d'une super-classe
- * <code>Operation</code> ainsi que d'une classe fille <code>OperationMathematique</code>
- * chargée de la gestion des chaînes de caractères définissant les opérations
- * mathématiques à résoudre. Elle utilise :
- * <pre>
- * String : Représente une chaîne de caractères dont le contenu ne
- * peut être modifié.
- * System : Contient plusieurs attributs et méthodes utiles au dialogue
- * avec le system d'exploitation.
- * </pre>
+ * Calculette syntaxique chargée d'analyser une chaîne de caractères spécifiant le calcul
+ * à réaliser. Les chaînes de caractères doivent respecter la forme suivante : <br />
+ * <code>operande1</code> <code>operation</code> <code>operande2</code>.
  *
  * @author Alain Lebret
- * @version 1.2
+ * @version 1.1
  */
 public class Calculette {
     /**
-     * opération à effectuer
+     * opérande 1 de la calculette
      */
     private OperationMathematique operation;
 
@@ -51,17 +47,15 @@ public class Calculette {
     }
 
     /**
-     * Effectue le calcul souhaité
+     * Effectue le calcul souhaité en fonction de l'opération donnée.
+     *
+     * @param operation Opération mathématique à réaliser (+, -, * et /)
      */
-    public void calculer(String uneOperation) {
-        if (uneOperation.equals("fin")) {
-            System.exit(-1);
-        } else {
-            try {
-                operation.resoudre(uneOperation);
-            } catch (OperationException e) {
-                System.err.println(e.toString());
-            }
+    public void calculer(String operation) {
+        try {
+            this.operation.resoudre(operation);
+        } catch (OperationException e) {
+            e.printStackTrace();
         }
     }
 
@@ -72,6 +66,6 @@ public class Calculette {
      * @return chaîne de caractères représentant le calcul effectué
      */
     public String toString() {
-        return operation.toString();
+        return "\n" + operation.toString() + "\n";
     }
 } // Fin Calculette

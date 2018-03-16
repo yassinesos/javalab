@@ -22,8 +22,6 @@
  */
 package tp3;
 
-import tp2.OperationException;
-
 /**
  * Amélioration de la calculette du TP n°2 avec gestion d'un tableau des n dernières
  * opérations effectuées. Elle utilise :
@@ -62,10 +60,7 @@ public class Calculette {
      * Effectue le calcul souhaité
      */
     public void calculer(String uneOperation) {
-        if (uneOperation.equals("fin")) {
-            System.exit(-1);
-        } else {
-            if (compteur == 4) {
+            if (compteur % 5 == 0) {
                 compteur = 0;
             }
             operations[compteur] = new OperationMathematique();
@@ -75,7 +70,6 @@ public class Calculette {
                 e.printStackTrace();
             }
             compteur++;
-        }
     }
 
     /**
@@ -88,8 +82,12 @@ public class Calculette {
     public String toString() {
         StringBuffer liste = new StringBuffer("");
 
-        for (int i = 0; i < compteur; i++) {
-            liste.append(operations[i].toString() + "\n");
+        for (int i = 0; i < operations.length; i++) {
+            if (operations[i] != null) {
+                liste.append(operations[i].toString() + "\n");
+            } else {
+                liste.append("Undefined\n");
+            }
         }
 
         return liste.toString();

@@ -22,16 +22,11 @@
  */
 package tp2;
 
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 /**
  * Définie une opération mathématique de la forme <code>operande1 operateur operande2</code>.
- * Elle utilise :
- * <pre>
- * Double          : encapsule le type primitif <i>double</i>.
- * String          : représente une chaîne de caractères dont le contenu ne peut
- * être modifié.
- * StringTokenizer : permet de découper une chaîne de caractères en éléments de base
- * base suivant des séparateurs précis.
- * </pre>
  *
  * @author Alain Lebret
  * @version 1.0
@@ -54,13 +49,7 @@ public class OperationMathematique extends Operation {
     /**
      * Résolution de l'Opération souhaitée : operande1 &lt;operation&gt; operande2. Une utilisation de
      * la classe <code>StringTokenizer</code> permet de découper une chaîne en sous-chaînes par
-     * l'intermédiaire de sa méthode <code>nextToken()</code>. Ces sous-chaînes sont alors
-     * transformées en objets "enveloppes" (Double, Character, ...), phase intermédiaire avant
-     * de pouvoir récupérer la valeur des types de base associés.<br />
-     * Classes utilisées : <br><blockquote>
-     * <code><b>StringTokenizer</b></code> avec sa méthode <code>String nextToken()</code><br />
-     * <code><b>Double</b></code> avec sa méthode <code><b>double</b> parseDouble(String s)</code><br />
-     * <code><b>String</b></code> avec sa méthode <code><b>char</b> charAt(<b>int</b> index)</code></blockquote>
+     * l'intermédiaire de sa méthode <code>nextToken()</code>.
      *
      * @param operation chaîne de caractères décrivant l'opération à effectuer
      * @see java.util.StringTokenizer
@@ -72,10 +61,15 @@ public class OperationMathematique extends Operation {
         }
         this.setOperation(operation);
 
-        java.util.StringTokenizer analyseur = new java.util.StringTokenizer(operation);
-        double operande1 = Double.parseDouble(analyseur.nextToken());
-        char operateur = (analyseur.nextToken()).charAt(0);
-        double operande2 = Double.parseDouble(analyseur.nextToken());
+        String motif = "([ +\\-*/])";
+        String operationSansEspaces = operation.replaceAll(" ", "");
+        Scanner sc = new Scanner(operationSansEspaces);
+
+        sc.useDelimiter(Pattern.compile(motif));
+        double operande1 = Double.parseDouble(sc.next());
+        char operateur = sc.findInLine(motif).charAt(0);
+        double operande2 = Double.parseDouble(sc.next());
+
 
         switch (operateur) {
             case '+':
