@@ -30,7 +30,6 @@ import java.util.regex.Pattern;
  *
  * @author Alain Lebret
  * @version 1.0
- * @see Operation
  */
 public class OperationMathematique extends Operation {
     /**

@@ -1,10 +1,11 @@
 /*
- * Java programming laboratory work.
+ * SVEN is an open source Java library for machine learning, image analysis
+ * and computer vision educational projects.
  *
  * Copyright (C) 2002-2018 Alain Lebret (alain.lebret@ensicaen.fr)
  * ENSICAEN
  * 6 Bd Maréchal Juin
- * 14000 Caen, France
+ * 4000 Caen, France
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +21,7 @@
  * limitations under the License.
  *
  */
-package corrige_tp05;
+package corrige_tp06;
 
 import javax.swing.*;
 import java.awt.*;
@@ -48,15 +49,15 @@ import java.awt.event.WindowListener;
  *
  * @author Alain Lebret
  * @version 1.0
- * @see javax.swing.JFrame
- * @see java.awt.event.WindowListener
- * @see java.awt.event.ActionListener
+ * @see JFrame
+ * @see WindowListener
+ * @see ActionListener
  */
 public class CalculetteSWING extends JFrame implements WindowListener, ActionListener {
     /**
      * objet Calculette
      */
-    private Calculette calculette;
+    private CalculetteSauvegarde calculette;
 
     /**
      * Champ de texte chargé de récupérer l'opération
@@ -74,7 +75,7 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
     public CalculetteSWING() {
         super("Calculette avec SWING");
 
-        calculette = new Calculette(5);
+        calculette = new CalculetteSauvegarde(5);
 
         this.getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 
@@ -125,6 +126,7 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
         if (evt.getSource() == this.tfOperation) {
             // Récupération du texte dans le champ de texte et transmission à la calculette
             calculette.calculer(tfOperation.getText());
+            calculette.sauvegarder();
 
             // Mise à jour de la zone de texte avec le résultat
             taResultat.setText("");
