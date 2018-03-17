@@ -12,7 +12,7 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 
 ## Programming in Java
 
-All the documents come from my course presented from 1996 to 2007. The folder ```divers``` contains some Java codes from laboratory works at the ENSICAEN (since 2016). 
+All the documents come from my course presented from 1996 to 2007. The folder ```divers``` contains Java code from some laboratory works at the ENSICAEN (since 2016). 
 
 ### Licensing
 
