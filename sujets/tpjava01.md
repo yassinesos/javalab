@@ -3,12 +3,10 @@
 ## Utiliser la classe String - Une Calculette syntaxique (1)
 
 ### Objectif
-
-Apprendre à manipuler classes et objets en utilisant les classes `String` et `StringTokenizer` en langage Java.
+Apprendre à manipuler classes et objets en utilisant les classes `String` et `Scanner` en langage Java.
 
 ### Pré-requis
-
-Cours chapitre 7 - Les classes et les objets
+Cours - Les classes et les objets
 
 ### Travail demandé
 
@@ -29,13 +27,10 @@ Voici quelques exemples de chaînes de caractères :
 La chaîne de caractères "fin" permet de quitter l'application par un appel à la méthode `System.exit(0)`.
 
 ### Conditions
-
-*   JDK
-*   Système d'exploitation GNU/Linux ou Ms-Windows
-*   Le fichier `Lecture.class` permettant la lecture clavier et sa documentation, le fichier `Calculette.class` et sa documentation `Calculette.html`, ainsi que le fichier de test `Essai.class` [[tp_01.zip](_data/teaching/programmation/java/tpjava/tp_01.zip)]
-*   Les documentations des classes [String](http://java.sun.com/j2se/1.5.0/docs/api/java/lang/String.html), [StringTokenizer](http://java.sun.com/j2se/1.5.0/docs/api/java/util/StringTokenizer.html) et [System](http://java.sun.com/j2se/1.5.0/docs/api/java/lang/System.html)
+*   JDK 1.5
+*   Système d'exploitation GNU/Linux, Mac OS X ou Ms-Windows
+*   Les documentations des classes [String](https://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html) et [Scanner](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Scanner.html)
 
 ### Critères d'évaluation
-
 *   Qualité et organisation des documents rendus (codes sources, fichier LISEZMOI, etc.)
 *   Autonomie
