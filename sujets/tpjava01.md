@@ -1,6 +1,6 @@
 # TP Java N<sup>o</sup> 1
 
-## Utiliser la classe String - Une Calculette syntaxique (1)
+## Utiliser la classe String - une calculette syntaxique (1)
 
 ### Objectif
 Apprendre à manipuler classes et objets en utilisant les classes `String` et `Scanner` en langage Java.
