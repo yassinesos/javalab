@@ -10,7 +10,7 @@ Cours - Les classes et les objets
 
 ### Travail demandé
 
-**La Calculette syntaxique (1)**  
+**La calculette syntaxique (1)**  
 On se propose de réaliser une calculette syntaxique minimale. À partir de la documentation générée pour la classe `Calculette`, réaliser une calculette syntaxique chargée d'analyser une chaîne de caractères représentant un calcul à effectuer. Les chaînes de caractères doivent respecter la forme suivante :
 
 ```opérande1 <opérateur> opérande2```
