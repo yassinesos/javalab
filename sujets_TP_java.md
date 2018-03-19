@@ -1,5 +1,5 @@
 ## Liste des TP présents sur ce serveur : ##
-- TP No 01 [Utiliser la classe String - une calculette syntaxique (1)]()
+- TP No 01 [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
 - TP No 02 [Les principes du concept d'objet - amélioration de la calculette (2)]()
 - TP No 03 [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
 - TP No 04 [Interface graphique avec AWT - amélioration de la calculette (4)]()
