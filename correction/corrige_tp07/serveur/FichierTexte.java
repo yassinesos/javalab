@@ -20,14 +20,14 @@
  * limitations under the License.
  *
  */
-package corrige_tp06;
+package corrige_tp07.serveur;
 
 import java.io.*;
 
 
 /**
  * Gestion d'un fichier Texte. Elle utilise :
- *
+ * <p>
  * BufferedReader : Flux d'entrée de caractères pourvu d'une mémoire tampon
  * afin d'optimiser la lecture de caractères isolés, de
  * tableaux et de chaînes de caractères.
@@ -68,7 +68,7 @@ public class FichierTexte {
      *
      * @param nomDuFichier nom du fichier texte à ouvrir
      * @param s            mode d'ouverture du fichier (lecture ("L" ou "R") / écriture ("E" ou "W"))
-     * @see java.io.IOException
+     * @see IOException
      */
     public void ouvrir(String nomDuFichier, String s) throws IOException {
         mode = (s.toUpperCase()).charAt(0);
@@ -86,7 +86,7 @@ public class FichierTexte {
     /**
      * Fermeture du fichier texte.
      *
-     * @see java.io.IOException
+     * @see IOException
      */
     public void fermer() throws IOException {
         if (mode == 'R' || mode == 'L') {
@@ -102,7 +102,7 @@ public class FichierTexte {
      * Lecture d'une ligne de texte dans le fichier texte.
      *
      * @return ligne de texte lue dans le fichier
-     * @see java.io.IOException
+     * @see IOException
      */
     public String lire() throws IOException {
         return fR.readLine();
@@ -112,7 +112,7 @@ public class FichierTexte {
      * Ecriture d'une chaîne de caractères dans le fichier texte.
      *
      * @param s chaîne de caractères à écrire
-     * @see java.io.IOException
+     * @see IOException
      */
     public void ecrire(String s) throws IOException {
         if (s != null) {

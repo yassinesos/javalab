@@ -20,7 +20,10 @@
  * limitations under the License.
  *
  */
-package corrige_tp06;
+package corrige_tp07.serveur;
+
+import corrige_tp06.FichierTexte;
+import corrige_tp06.OperationMathematique;
 
 /**
  * Calculette bénéficiant d'une sauvegarde des opérations dans un fichier. Ce dernier

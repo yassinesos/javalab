@@ -20,7 +20,7 @@
  * limitations under the License.
  *
  */
-package corrige_tp05;
+package corrige_tp07.serveur;
 
 /**
  * Définie une exception en cas d'opération non reconnue.

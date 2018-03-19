@@ -20,15 +20,14 @@
  * limitations under the License.
  *
  */
-package corrige_tp05;
+package corrige_tp07.serveur;
 
 /**
  * Définie une opération sous forme de chaine de caractères. Permet d'introduire la
  * notion d'héritage ainsi que de l'encapsulation. Elle utilise :
- * <pre>
+ * <p>
  * String : Représente une chaîne de caractères dont le contenu ne
  * peut être modifié.
- * </pre>
  *
  * @author Alain Lebret
  * @version 1.0

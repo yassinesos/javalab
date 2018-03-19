@@ -20,8 +20,9 @@
  * limitations under the License.
  *
  */
-package corrige_tp05;
+package corrige_tp07.serveur;
 
+import java.io.Serializable;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
@@ -31,7 +32,7 @@ import java.util.regex.Pattern;
  * @author Alain Lebret
  * @version 1.0
  */
-public class OperationMathematique extends Operation {
+public class OperationMathematique extends Operation implements Serializable {
     /**
      * Résultat de l'opération
      */
@@ -49,9 +50,9 @@ public class OperationMathematique extends Operation {
      * Résolution de l'Opération souhaitée : operande1 &lt;operation&gt; operande2.
      *
      * @param uneOperation chaîne de caractères décrivant l'opération à effectuer
-     * @see java.util.Scanner
-     * @see java.util.regex.Pattern
-     * @see java.lang.Double
+     * @see Scanner
+     * @see Pattern
+     * @see Double
      */
     public void resoudre(String uneOperation) throws OperationException {
         if (uneOperation == null) {

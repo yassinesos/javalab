@@ -22,7 +22,6 @@
  */
 package corrige_tp04;
 
-
 import java.util.Scanner;
 import java.util.regex.Pattern;
 

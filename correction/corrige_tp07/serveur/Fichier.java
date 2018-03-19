@@ -20,14 +20,14 @@
  * limitations under the License.
  *
  */
-package corrige_tp06;
+package corrige_tp07.serveur;
 
 import java.io.*;
 
 /**
  * La classe Fichier propose une gestion simplifiée des fichiers de sérialisation
  * des objets. Elle utilise :
- *
+ * <p>
  * ClassNotFoundException : Indique qu'une application essaie de charger une
  * classe introuvable.
  * FileInputStream        : Flux d'entrée permettant la lecture d'octets depuis
@@ -57,7 +57,7 @@ public class Fichier {
      * Constructeur.
      *
      * @param nomDuFichier nom du fichier à ouvrir
-     * @see java.io.IOException
+     * @see IOException
      */
     public Fichier(String nomDuFichier) {
         nom = nomDuFichier;
@@ -67,8 +67,8 @@ public class Fichier {
      * Lecture d'un Objet dans le fichier.
      *
      * @return une référence sur l'objet lu
-     * @see java.io.IOException
-     * @see java.lang.ClassNotFoundException
+     * @see IOException
+     * @see ClassNotFoundException
      */
     public Object lire() {
         Object tmp = null;
@@ -90,7 +90,7 @@ public class Fichier {
      * Ecriture d'un Objet dans le fichier.
      *
      * @param tmp référence de l'objet à écrire
-     * @see java.io.IOException
+     * @see IOException
      */
     public void ecrire(Object tmp) {
         if (tmp != null) {

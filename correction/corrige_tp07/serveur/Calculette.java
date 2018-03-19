@@ -20,7 +20,10 @@
  * limitations under the License.
  *
  */
-package corrige_tp06;
+package corrige_tp07.serveur;
+
+import corrige_tp06.OperationException;
+import corrige_tp06.OperationMathematique;
 
 /**
  * Amélioration de la calculette du TP no 2 avec gestion d'un tableau des n dernières
