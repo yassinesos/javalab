@@ -1,4 +1,4 @@
-# TP Java N<sup>o</sup> 1
+# TP Java n<sup>o</sup> 1
 
 ## Utiliser la classe String - une calculette syntaxique (1)
 
