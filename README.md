@@ -9,7 +9,7 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 * Les éléments de solutions et les exemples de code sont quant à eux proposés sous licence [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ### Liste des TP présents sur ce serveur : ###
-- TP n<sup>o</sup> 01 : [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
+- TP n<sup>o</sup> :one: : [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
 - TP n<sup>o</sup> 02 : [Les principes du concept d'objet - amélioration de la calculette (2)]()
 - TP n<sup>o</sup> 03 : [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
 - TP n<sup>o</sup> 04 : [Interface graphique avec AWT - amélioration de la calculette (4)]()
@@ -34,7 +34,7 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 
 ### List of laboratory works (in french) : ###
 - Labwork n<sup>o</sup> 01 : [Using String class - a simple syntaxic calculator (1)](sujets/tpjava01.md)
-- Labwork n<sup>o</sup> 02 : [Object concepts - an improvment of the simple syntaxic calculator (2)]()
+- Labwork n<sup>o</sup> 02 : [Object concepts - improving the simple syntaxic calculator (2)]()
 - Labwork n<sup>o</sup> 03 : [Fixed collection of objects - improving the simple syntaxic calculator (3)]()
 - Labwork n<sup>o</sup> 04 : [GUI using AWT - improving the simple syntaxic calculator (4)]()
 - Labwork n<sup>o</sup> 05 : [GUI using Swing - improving the simple syntaxic calculator (5)]()
