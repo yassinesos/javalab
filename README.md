@@ -8,6 +8,18 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 
 * Les éléments de solutions et les exemples de code sont quant à eux proposés sous licence [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
+### Liste des TP présents sur ce serveur : ###
+- TP n<sup>o</sup> 01 : [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
+- TP n<sup>o</sup> 02 : [Les principes du concept d'objet - amélioration de la calculette (2)]()
+- TP n<sup>o</sup> 03 : [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
+- TP n<sup>o</sup> 04 : [Interface graphique avec AWT - amélioration de la calculette (4)]()
+- TP n<sup>o</sup> 05 : [Interface graphique avec Swing - amélioration de la calculette (5)]()
+- TP n<sup>o</sup> 06 : [Travailler avec les fichiers - amélioration de la calculette (6)]()
+- TP n<sup>o</sup> 07 : [Travailler en réseau avec UDP - amélioration de la calculette (7)]()
+- TP n<sup>o</sup> 08 : [Travailler en réseau avec TCP - amélioration de la calculette (8)]()
+- TP n<sup>o</sup> 09 : [Utiliser les threads - amélioration de la calculette (9)]()
+- TP n<sup>o</sup> 10 : [Lancer une application externe - amélioration de la calculette (10)]()
+
 -----
 
 ## Programming in Java
@@ -19,3 +31,15 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 * The documents (courses, laboratory work handouts and images) are provided under the Creative Commons [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
 
 * The code samples are licensed under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+### List of laboratory works (in french) : ###
+- Labwork n<sup>o</sup> 01 : [Using String class - a simple syntaxic calculator (1)](sujets/tpjava01.md)
+- Labwork n<sup>o</sup> 02 : [Object concepts - an improvment of the simple syntaxic calculator (2)]()
+- Labwork n<sup>o</sup> 03 : [Fixed collection of objects - improving the simple syntaxic calculator (3)]()
+- Labwork n<sup>o</sup> 04 : [GUI using AWT - improving the simple syntaxic calculator (4)]()
+- Labwork n<sup>o</sup> 05 : [GUI using Swing - improving the simple syntaxic calculator (5)]()
+- Labwork n<sup>o</sup> 06 : [Working with files - improving the simple syntaxic calculator (6)]()
+- Labwork n<sup>o</sup> 07 : [Networking with UDP - improving the simple syntaxic calculator (7)]()
+- Labwork n<sup>o</sup> 08 : [Networking with TCP - improving the simple syntaxic calculator (8)]()
+- Labwork n<sup>o</sup> 09 : [Using threads - improving the simple syntaxic calculator (9)]()
+- Labwork n<sup>o</sup> 10 : [Running an external program - improving the simple syntaxic calculator (10)]()
