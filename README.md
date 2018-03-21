@@ -9,16 +9,16 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 * Les éléments de solutions et les exemples de code sont quant à eux proposés sous licence [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ### Liste des TP présents sur ce serveur : ###
-- TP n<sup>o</sup> :one: : [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
-- TP n<sup>o</sup> 02 : [Les principes du concept d'objet - amélioration de la calculette (2)]()
-- TP n<sup>o</sup> 03 : [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
-- TP n<sup>o</sup> 04 : [Interface graphique avec AWT - amélioration de la calculette (4)]()
-- TP n<sup>o</sup> 05 : [Interface graphique avec Swing - amélioration de la calculette (5)]()
-- TP n<sup>o</sup> 06 : [Travailler avec les fichiers - amélioration de la calculette (6)]()
-- TP n<sup>o</sup> 07 : [Travailler en réseau avec UDP - amélioration de la calculette (7)]()
-- TP n<sup>o</sup> 08 : [Travailler en réseau avec TCP - amélioration de la calculette (8)]()
-- TP n<sup>o</sup> 09 : [Utiliser les threads - amélioration de la calculette (9)]()
-- TP n<sup>o</sup> 10 : [Lancer une application externe - amélioration de la calculette (10)]()
+- :one: : [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
+- :two: : [Les principes du concept d'objet - amélioration de la calculette (2)]()
+- :three: : [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
+- :four: : [Interface graphique avec AWT - amélioration de la calculette (4)]()
+- :five: : [Interface graphique avec Swing - amélioration de la calculette (5)]()
+- :six: : [Travailler avec les fichiers - amélioration de la calculette (6)]()
+- :seven: : [Travailler en réseau avec UDP - amélioration de la calculette (7)]()
+- :eight: : [Travailler en réseau avec TCP - amélioration de la calculette (8)]()
+- :nine: : [Utiliser les threads - amélioration de la calculette (9)]()
+- :keycap_ten: : [Lancer une application externe - amélioration de la calculette (10)]()
 
 -----
 
@@ -42,4 +42,4 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 - Labwork n<sup>o</sup> 07 : [Networking with UDP - improving the simple syntaxic calculator (7)]()
 - Labwork n<sup>o</sup> 08 : [Networking with TCP - improving the simple syntaxic calculator (8)]()
 - Labwork n<sup>o</sup> 09 : [Using threads - improving the simple syntaxic calculator (9)]()
-- Labwork n<sup>o</sup> 10 : [Running an external program - improving the simple syntaxic calculator (10)]()
+- :keycap_ten: : [Running an external program - improving the simple syntaxic calculator (10)]()
