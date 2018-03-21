@@ -10,7 +10,7 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 
 ### Liste des TP présents sur ce serveur : ###
 - :one: [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
-- :two: [Les principes du concept d'objet - amélioration de la calculette (2)]()
+- :two: [Les principes du concept d'objet - amélioration de la calculette (2)](sujets/tpjava02.md)
 - :three: [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
 - :four: [Interface graphique avec AWT - amélioration de la calculette (4)]()
 - :five: [Interface graphique avec Swing - amélioration de la calculette (5)]()
@@ -34,7 +34,7 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 
 ### List of laboratory works (in french) : ###
 - :one: [Using class String - a simple syntaxic calculator (1)](sujets/tpjava01.md)
-- :two: [Some concepts - improving the simple syntaxic calculator (2)]()
+- :two: [Some concepts - improving the simple syntaxic calculator (2)](sujets/tpjava02.md)
 - :three: [Fixed collection of objects - improving the simple syntaxic calculator (3)]()
 - :four: [GUI using AWT - improving the simple syntaxic calculator (4)]()
 - :five: [GUI using Swing - improving the simple syntaxic calculator (5)]()
