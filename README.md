@@ -9,7 +9,7 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 * Les éléments de solutions et les exemples de code sont quant à eux proposés sous licence [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ### Liste des TP présents sur ce serveur : ###
-- :one: [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md)
+- :one: [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md) ([correction](correction/tp01))
 - :two: [Les principes du concept d'objet - amélioration de la calculette (2)](sujets/tpjava02.md)
 - :three: [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
 - :four: [Interface graphique avec AWT - amélioration de la calculette (4)]()
