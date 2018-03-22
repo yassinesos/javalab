@@ -10,12 +10,15 @@ Cours - Collectionner un nombre indéterminé d'objets
 
 ### Travail demandé
 **1\. Exploiter les fichiers à accès séquentiels textes**
-Valider la classe `FichierTexte` (issue de la classe `Fichier` d'Anne Tasso) en créant une classe de test `EssaiFichierTexte`.
+
+Valider la classe `FichierTexte` en créant une classe de test `EssaiFichierTexte`.
 
 **2\. Exploiter les fichiers à accès séquentiels de sérialisation d'objets**
-Valider la classe `FichierObjet` (issue de la classe `FichierEtudiant` d'Anne Tasso) en créant une classe de test `EssaiFichierObjet`.
+
+Valider la classe `FichierObjet` en créant une classe de test `EssaiFichierObjet`.
 
 **3\. Exploiter les fichiers à accès séquentiels binaires**
+
 Tester la classe `EssaiFichierBinaire` (elle utilise les classes [DataInputStream](http://java.sun.com/j2se/1.5.0/docs/api/java/io/DataInputStream.html) et [DataOutputStream](http://java.sun.com/j2se/1.5.0/docs/api/java/io/DataOutputStream.html) du paquetage `java.io`). Vérifier le contenu du fichier `test.bin` à l'aide d'un éditeur hexadécimal. Quelle remarque peut-on faire sur le format de stockage des données ?
 
 **4\. Exploiter les fichiers à accès direct**
@@ -24,9 +27,9 @@ L'inconvénient d'un fichier à accès séquentiel est d'obliger le parcours de 
 
 **5\. Amélioration de la Calculette (6)**
 
-On se propose de reprendre la calculette du TP précédent. On souhaite que cette dernière bénéficie à présent d'une sauvegarde dans un fichier des cinq dernières opérations effectuées. Choisir le type de fichier (texte ou binaire) à employer, et utiliser l'héritage pour réaliser la classe `CalculetteSauvegarde` à partir de la classe `Calculette` comme l'indique le diagramme de classes de la figure 6.1\. Modifier la classe `CalculetteAWT` (ou `CalculetteSWING`) en conséquence.
+On se propose de reprendre la calculette du TP précédent. On souhaite que cette dernière bénéficie à présent d'une sauvegarde dans un fichier des cinq dernières opérations effectuées. Choisir le type de fichier (texte ou binaire) à employer, et utiliser l'héritage pour réaliser la classe `CalculetteSauvegarde` à partir de la classe `Calculette` comme l'indique le diagramme de classes ci-dessous. Modifier la classe `CalculetteAWT` (ou `CalculetteSWING`) en conséquence.
 
-![Diagramme de classes](tp06/dia_classes.png)
+![Diagramme de classes](sujets/tp06/dia_classes.png)
 
 ### Conditions
 *   JDK 1.5
