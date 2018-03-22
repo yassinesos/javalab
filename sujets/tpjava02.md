@@ -1,6 +1,6 @@
 # TP Java n<sup>o</sup> 2
 
-## Les principes du concept d'objet - Amélioration de la calculette (2)
+## Les principes du concept d'objet - amélioration de la calculette (2)
 
 ### Objectif
 Mettre en oeuvre les notions d'**encapsulation**, de **communication** entre objets et d''**héritage** par amélioration de la calculette.
