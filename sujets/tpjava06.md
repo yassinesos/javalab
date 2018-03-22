@@ -29,7 +29,7 @@ L'inconvénient d'un fichier à accès séquentiel est d'obliger le parcours de 
 
 On se propose de reprendre la calculette du TP précédent. On souhaite que cette dernière bénéficie à présent d'une sauvegarde dans un fichier des cinq dernières opérations effectuées. Choisir le type de fichier (texte ou binaire) à employer, et utiliser l'héritage pour réaliser la classe `CalculetteSauvegarde` à partir de la classe `Calculette` comme l'indique le diagramme de classes ci-dessous. Modifier la classe `CalculetteAWT` (ou `CalculetteSWING`) en conséquence.
 
-![Diagramme de classes](sujets/tp06/dia_classes.png)
+![Diagramme de classes](tp06/dia_classes.png)
 
 ### Conditions
 *   JDK 1.5
