@@ -1,6 +1,6 @@
 # TP Java n<sup>o</sup> 9
 
-## Travailler en réseau avec TCP - amélioration de la calculette (8)
+## Travailler en réseau avec TCP - amélioration de la calculette (9)
 
 ### Objectif
 Apprendre à utiliser les _threads_ en Java.
