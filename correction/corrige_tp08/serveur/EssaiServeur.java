@@ -22,9 +22,6 @@
  */
 package corrige_tp08.serveur;
 
-import java.io.IOException;
-import java.net.ServerSocket;
-
 /**
  * Classe d'essai pour le serveur
  *
@@ -36,22 +33,7 @@ public class EssaiServeur {
      * Fonction principale
      */
     public static void main(String[] argument) {
-        ServerSocket listener;
-        ServeurTCP serveur = null;
-        boolean continu = true;
-
-        try {
-            listener = new ServerSocket(9090);
-            serveur = new ServeurTCP(listener.accept());
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        assert serveur != null;
-
-        while (continu) {
-            continu = serveur.rendreService();
-        }
+        ServeurTCP serveur = new ServeurTCP(9090);
+        serveur.ecouter();
     }
 } // Fin Essai

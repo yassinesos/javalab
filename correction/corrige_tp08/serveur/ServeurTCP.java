@@ -23,120 +23,79 @@
 package corrige_tp08.serveur;
 
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * La classe ServeurTCP ouvre un flot d'entrée et un flot de sortie sur la socket de
- * communication du client. Elle reçoit le calcul à effectuer et le transmet
- * à la calculette. Une fois le calcul effectué, le résultat est renvoyé par la
- * socket.   Elle utilise :
- * <pre>
- * ClassNotFoundException : Indique qu'une application essaie de charger une
- * classe introuvable.
- * IOException            : Indique une erreur d'entrée/sortie quelconque.
- * ObjectInputStream      : Permet la désérialisation de types primitifs Java et
- * d'objets sérialisés à l'aide de la classe ObjectOutputStream.
- * ObjectOutputStream     : Permet la sérialisation de types Java primitifs ou
- * d'objets sérialisables (implémentants <code>Serializable</code>).
- * Socket                 : Représente une connexion réseau.
- * System                 : Contient plusieurs attributs et méthodes utiles au
- * dialogue avec le system d'exploitation.
- * </pre>
+ * Permet de présenter la communication sous TCP - mode Client/Serveur.  Elle utilise :
+ * <PRE>
+ * IOException  : Indique une erreur d'entrée/sortie quelconque.
+ * ServerSocket : Implémente une écoute réseau du côté serveur, c'est-à-dire
+ * un objet attendant la connexion d'un client pour établir
+ * une connexion.
+ * Socket       : Représente une connexion réseau.
+ * System       : Contient plusieurs attributs et méthodes utiles au dialogue
+ * avec le system d'exploitation.
+ * </PRE>
  *
  * @author Alain Lebret
  * @version 1.0
  */
-public class ServeurTCP {
+class ServeurTCP {
     /**
-     * socket de communication
+     * Port de communication
      */
-    private Socket socket;
+    int port;
 
     /**
-     * Flot d'entrée pour les objets résultats (de type String)
+     * Socket de contrôle chargée de l'écoute des connexions sur le port
      */
-    private ObjectInputStream entree = null;
+    ServerSocket receptionniste = null;
 
     /**
-     * Flot de sortie pour les objets requêtes (de type String)
+     * Socket de communication
      */
-    private ObjectOutputStream sortie = null;
+    Socket socket = null;
 
     /**
-     * calculette
+     * Service proposé par le serveur
      */
-    private CalculetteSauvegarde calculette;
+    Service serviceCalculette = null;
 
     /**
-     * Constructeur par défaut. Récupère la référence de la socket du Serveur, instancie
-     * la calculette et construit les flots de communication.
+     * Constructeur par défaut. Met en route la socket de contrôle.
      *
-     * @param uneSocket socket de communication
+     * @param unPort port de communication
      */
-    ServeurTCP(Socket uneSocket) {
-        this.socket = uneSocket;
-        calculette = new CalculetteSauvegarde(5);
+    public ServeurTCP(int unPort) {
+        port = unPort;
 
-        // connexion avec le client via la socket
+        // Création de la socket de contrôle
         try {
-            entree = new ObjectInputStream(socket.getInputStream());
-            sortie = new ObjectOutputStream(socket.getOutputStream());
+            System.out.println("ServeurTCP - Serveur demarre");
+            receptionniste = new ServerSocket(port);
         } catch (IOException exc) {
-            System.err.println("Service:constructeur() - Ouverture des flots de communication impossible");
-            try {
-                socket.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            System.err.println("ServeurTCP:constructeur() - Impossible de demarrer le serveur");
         }
     }
 
     /**
-     * Met en route le service de calcul.
-     *
-     * @return vrai si la requête est valide et a été traitée, faux si "fin" reçue ou si invalide
+     * Attente de la connexion d'un client et création d'un nouveau Service
+     * si c'est le cas.
      */
-    public boolean rendreService() {
+    public void ecouter() {
         try {
-            System.out.println("Service - La calculette attend un calcul");
-            String tmp = (String) entree.readObject();
-
-            if (tmp.equals("fin")) {
-                return false;
+            System.out.println("ServeurTCP - Attente d'un client...");
+            socket = receptionniste.accept();
+            System.out.println("ServeurTCP - Client connecte");
+            serviceCalculette = new Service(socket);
+            while (true) {
+                if (!serviceCalculette.rendreService()) break;
             }
-
-            System.out.println("Service - Le calcul a effectuer est : " + tmp);
-            calculette.calculer(tmp);
-            System.out.println("Service - Calcul effectué");
-            calculette.sauvegarder();
-            System.out.println("Service - Sauvegarde effectuée sur le serveur");
-            tmp = calculette.toString();
-            sortie.writeObject(tmp);
-            System.out.println("Service - Résultat transmis au client");
-            sortie.flush(); // Chaque flot gagne à être nettoyé après lecture ou écriture
+            System.out.println("ServeurTCP - Service rendu");
+            serviceCalculette.terminer();
         } catch (IOException exc) {
-            System.err.println("Service:rendreService() - Le service n'a pu être rendu");
-            return false;
-        } catch (ClassNotFoundException e) {
-            System.err.println("ClientTCP:requeter() - Objet inconnu.");
-        }
-        return true;
-    }
-
-    /**
-     * Fin du service avec fermeture de la socket et des flots de communication associés.
-     */
-    public void terminer() {
-        // fermeture des flots
-        try {
-            System.out.println("Service - Fin");
-            socket.close();
-            entree.close();
-            sortie.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+            System.err.println("ServeurTCP:ecouter() - probleme de connection");
         }
     }
 } // Fin ServeurTCP
