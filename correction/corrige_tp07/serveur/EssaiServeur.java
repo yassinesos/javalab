@@ -51,7 +51,7 @@ public class EssaiServeur {
             calculette.calculer(tmp);
             calculette.sauvegarder();
             tmp = calculette.toString();
-            System.out.println("Le resultat envoye est : \n" + tmp);
+            System.out.println("Le resultat envoyé est : \n" + tmp);
             emetteur.envoyer("127.0.0.1", tmp);
         }
     }

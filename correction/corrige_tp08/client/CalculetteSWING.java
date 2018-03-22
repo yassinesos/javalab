@@ -20,7 +20,7 @@
  * limitations under the License.
  *
  */
-package corrige_tp07.client;
+package corrige_tp08.client;
 
 import javax.swing.*;
 import java.awt.*;
@@ -41,14 +41,9 @@ import java.awt.event.WindowListener;
  */
 public class CalculetteSWING extends JFrame implements WindowListener, ActionListener {
     /**
-     * objet EmetteurUDP pour transmettre les calculs à effectuer
+     * objet pour transmettre les calculs à effectuer
      */
-    private EmetteurUDP emetteurUDP;
-
-    /**
-     * objet RecepteurUDP pour recevoir les résultats du calculs à effectuer
-     */
-    private RecepteurUDP recepteurUDP;
+    private ClientTCP clientTCP;
 
     /**
      * MenuItem "Connecter" du menu "Serveur"
@@ -85,6 +80,7 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
      */
     public CalculetteSWING() {
         super("Calculette avec SWING");
+        clientTCP = new ClientTCP(9090);
         this.construireMenus();
 
         this.getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -170,11 +166,13 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
          * Si l'objet dans lequel à eu lieu l'événement est le champ de texte...
          */
         if (evt.getSource() == this.tfOperation) {
-            // Récupération du texte dans le champ de texte et transmission à la calculette
-            emetteurUDP.envoyer("127.0.0.1", tfOperation.getText());
+            String tmp1 = tfOperation.getText();
+            System.out.println("Calcul a envoye : " + tmp1);
+            String tmp = clientTCP.requeter(tmp1);
 
             // Mise à jour de la zone de texte avec le résultat
-            taResultat.setText(recepteurUDP.recevoir());
+            System.out.println("Resultat recu : " + tmp);
+            taResultat.setText(tmp);
         }
 
         /*
@@ -182,27 +180,23 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
          */
         if (evt.getSource() == this.miConnecter) {
             System.out.println("Connexion en cours...");
-            emetteurUDP = new EmetteurUDP(4000);
-            recepteurUDP = new RecepteurUDP(4001);
-            System.out.println("Connexion effectuée");
+            clientTCP.connecter("127.0.0.1");
+            System.out.println("Connexion effectuee");
         }
 
         /*
          * Si l'objet dans lequel à eu lieu l'événement est le MenuItem "Déconnecter"
          */
         if (evt.getSource() == this.miDeconnecter) {
-            System.out.println("Déconnexion en cours...");
-            emetteurUDP = null;
-            recepteurUDP = null;
-            System.out.println("Client déconnecté");
+            System.out.println("Deconnexion en cours...");
+            clientTCP.deconnecter();
+            System.out.println("Client deconnecte");
         }
 
         /*
          * Si l'objet dans lequel à eu lieu l'événement est le MenuItem "Quitter"
          */
         if (evt.getSource() == this.miQuitter) {
-            emetteurUDP = null;
-            recepteurUDP = null;
             System.exit(0);
         }
 
@@ -210,7 +204,7 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
          * Si l'objet dans lequel à eu lieu l'événement est le MenuItem "A Propos"
          */
         if (evt.getSource() == this.miAPropos) {
-            JOptionPane.showMessageDialog(this, "Calculette v. 1.7\nTSII - 2000",
+            JOptionPane.showMessageDialog(this, "Calculette v. 1.8\nTSII - 2000",
                     "A Propos", JOptionPane.PLAIN_MESSAGE);
         }
     }

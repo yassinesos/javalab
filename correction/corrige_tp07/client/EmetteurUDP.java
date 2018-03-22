@@ -68,7 +68,7 @@ class EmetteurUDP {
     public void envoyer(String destinataire, String mes) {
         String s = mes + "@"; // La chaîne est finalisée par un caractère de fin
         int longueur = s.length();
-        byte[] message = new byte[longueur]; // Création du tableau d'octets qui sera placé dans le paquet
+        byte[] message; // Tableau d'octets qui sera placé dans le paquet
 
         InetAddress adresse = null; // adresse du destinataire
         DatagramSocket socket; // socket de communication
