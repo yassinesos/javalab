@@ -13,7 +13,7 @@ Cours - Dessiner des objets
 On se propose de reprendre la calculette du TP précédent. On souhaite que cette dernière bénéficie à présent d'une interface homme-machine graphique 
 du type minimal fourni ci-après.
 
-![Diagramme de classes](tp04/ihm.png)
+![Diagramme de classes](tp04/calculette.png)
 
 Utiliser les classes `Calculette`, `Operation` et `OperationMathematique` sans les modifier afin de profiter des avantages de la programmation objet, puis 
 créer une nouvelle classe nommée `CalculetteAWT` et utilisant la classe `Calculette`. Le diagramme de classes correspondant respectera la forme suivante :
