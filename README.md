@@ -10,9 +10,9 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 
 ### Liste des TP présents sur ce serveur : ###
 - :one: [Utiliser la classe String - une calculette syntaxique (1)](sujets/tpjava01.md) (_[correction](correction/corrige_tp01)_)
-- :two: [Les principes du concept d'objet - amélioration de la calculette (2)](sujets/tpjava02.md)
-- :three: [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)]()
-- :four: [Interface graphique avec AWT - amélioration de la calculette (4)]()
+- :two: [Les principes du concept d'objet - amélioration de la calculette (2)](sujets/tpjava02.md) (_[correction](correction/corrige_tp02)_)
+- :three: [Collectionner un nombre fixe d'objets - amélioration de la calculette (3)](sujets/tpjava03.md) (_[correction](correction/corrige_tp04)_)
+- :four: [Interface graphique avec AWT - amélioration de la calculette (4)](sujets/tpjava04.md) (_[correction](correction/corrige_tp04)_)
 - :five: [Interface graphique avec Swing - amélioration de la calculette (5)]()
 - :six: [Travailler avec les fichiers - amélioration de la calculette (6)]()
 - :seven: [Travailler en réseau avec UDP - amélioration de la calculette (7)]()
@@ -34,9 +34,9 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 
 ### List of laboratory works (in french) : ###
 - :one: [Using class String - a simple syntaxic calculator (1)](sujets/tpjava01.md) (_[correction](correction/corrige_tp01)_)
-- :two: [Some concepts - improving the simple syntaxic calculator (2)](sujets/tpjava02.md)
-- :three: [Fixed collection of objects - improving the simple syntaxic calculator (3)]()
-- :four: [GUI using AWT - improving the simple syntaxic calculator (4)]()
+- :two: [Some concepts - improving the simple syntaxic calculator (2)](sujets/tpjava02.md) (_[correction](correction/corrige_tp02)_)
+- :three: [Fixed collection of objects - improving the simple syntaxic calculator (3)](sujets/tpjava03.md) (_[correction](correction/corrige_tp03)_)
+- :four: [GUI using AWT - improving the simple syntaxic calculator (4)](sujets/tpjava04.md) (_[correction](correction/corrige_tp04)_)
 - :five: [GUI using Swing - improving the simple syntaxic calculator (5)]()
 - :six: [Working with files - improving the simple syntaxic calculator (6)]()
 - :seven: [Networking with UDP - improving the simple syntaxic calculator (7)]()
