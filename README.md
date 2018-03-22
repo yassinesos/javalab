@@ -32,7 +32,7 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 
 * The code samples are licensed under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-### List of laboratory works (in french) : ###
+### List of laboratory works (in _french_) : ###
 - :one: [Using class String - a simple syntaxic calculator (1)](sujets/tpjava01.md) (_[correction](correction/corrige_tp01)_)
 - :two: [Some concepts - improving the simple syntaxic calculator (2)](sujets/tpjava02.md) (_[correction](correction/corrige_tp02)_)
 - :three: [Fixed collection of objects - improving the simple syntaxic calculator (3)](sujets/tpjava03.md) (_[correction](correction/corrige_tp03)_)
