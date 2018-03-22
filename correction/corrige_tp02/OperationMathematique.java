@@ -95,6 +95,6 @@ public class OperationMathematique extends Operation {
      * @return chaîne de caractères représentant le calcul effectué
      */
     public String toString() {
-        return this.getOperation() + " = " + resultat;
+        return String.format("%s = %s", this.getOperation(), resultat);
     }
 } // Fin OperationMathematique

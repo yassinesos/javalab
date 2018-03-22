@@ -43,20 +43,11 @@ package corrige_tp10.client;
  * @version 1.0
  */
 public class Executeur {
-    /**
-     * Espace d'environnement dans lequel l'instance d'Executeur existe
-     */
-    private Runtime r = null;
 
     /**
      * Sous-processus à exécuter
      */
     private Process p = null;
-
-    /**
-     * Chaîne de commande
-     */
-    private String commande;
 
     /**
      * Constructeur par défaut
@@ -67,15 +58,14 @@ public class Executeur {
     /**
      * Permet l'exécution du sous-processus
      *
-     * @param cmd la commande que l'Executeur doit lancer
+     * @param commande la commande que l'Executeur doit lancer
      * @see java.lang.Process
      * @see java.lang.Runtime
      */
-    public void lancer(String cmd) {
-        this.commande = cmd;
-
+    public void lancer(String commande) {
         try {
-            r = Runtime.getRuntime();
+            /* Espace d'environnement dans lequel l'instance d'Executeur existe */
+            Runtime r = Runtime.getRuntime();
             p = r.exec(commande);
         } catch (java.io.IOException e) {
             System.err.println("Erreur en E/S : " + e);

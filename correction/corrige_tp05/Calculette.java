@@ -27,7 +27,7 @@ package corrige_tp05;
  * opérations effectuées.
  *
  * @author Alain Lebret
- * @version 1.2
+ * @version 1.3
  */
 public class Calculette {
     /**

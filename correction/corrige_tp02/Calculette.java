@@ -28,7 +28,7 @@ package corrige_tp02;
  * <code>operande1</code> <code>operation</code> <code>operande2</code>.
  *
  * @author Alain Lebret
- * @version 1.1
+ * @version 1.2
  */
 public class Calculette {
     /**
@@ -63,6 +63,6 @@ public class Calculette {
      * @return chaîne de caractères représentant le calcul effectué
      */
     public String toString() {
-        return "\n" + operation.toString() + "\n";
+        return String.format("\n%s\n", operation.toString());
     }
 } // Fin Calculette

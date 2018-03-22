@@ -34,14 +34,14 @@ import java.awt.event.WindowListener;
  * la connexion avec le serveur.
  *
  * @author Alain Lebret
- * @version 1.0
+ * @version 1.3
  * @see JFrame
  * @see WindowListener
  * @see ActionListener
  */
 public class CalculetteSWING extends JFrame implements WindowListener, ActionListener {
     /**
-     * objet pour transmettre les calculs à effectuer
+     * Objet pour transmettre les calculs à effectuer
      */
     private ClientTCP clientTCP;
 

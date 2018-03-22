@@ -27,7 +27,7 @@ package corrige_tp10.serveur;
  * opérations effectuées.
  *
  * @author Alain Lebret
- * @version 1.2
+ * @version 1.4
  */
 public class Calculette {
     /**

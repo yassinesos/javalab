@@ -40,10 +40,6 @@ import java.net.ServerSocket;
  * @version 1.1
  */
 class ServeurTCP {
-    /**
-     * Port de communication
-     */
-    private int port;
 
     /**
      * Socket de contrôle chargée de l'écoute des connexions sur le port
@@ -63,10 +59,9 @@ class ServeurTCP {
     /**
      * Constructeur par défaut. Met en route la socket de contrôle.
      *
-     * @param unPort port de communication
+     * @param port port de communication
      */
-    public ServeurTCP(int unPort, int unNombreClients) {
-        port = unPort;
+    public ServeurTCP(int port, int unNombreClients) {
         serviceCalculette = new Service[unNombreClients];
         serviceCourant = 0;
 

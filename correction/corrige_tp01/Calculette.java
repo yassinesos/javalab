@@ -28,34 +28,35 @@ import java.util.regex.Pattern;
 /**
  * Calculette syntaxique chargée d'analyser une chaîne de caractères spécifiant le calcul
  * à réaliser. Les chaînes de caractères doivent respecter la forme suivante : <br />
- * <code>operande1</code> <code>operation</code> <code>operande2</code>.
+ * <code>operande1</code> <code>operateur</code> <code>operande2</code>.
  *
  * @author Alain Lebret
  * @version 1.1
  */
 public class Calculette {
     /**
-     * opérande 1 de la calculette
+     * Opérande 1 de la calculette
      */
     private double operande1;
 
     /**
-     * opérande 2 de la calculette
+     * Opérande 2 de la calculette
      */
     private double operande2;
 
     /**
-     * opération effectuée sur la calculette
+     * Opération effectuée sur la calculette ('+', '-', '*' et '/')
      */
     private char operateur;
 
     /**
-     * résultat de l'opération
+     * Résultat de l'opération
      */
     private double resultat;
 
     /**
-     * Constructeur par défaut. Celui-ci initialise les attributs de la classe.
+     * Constructeur par défaut. Celui-ci initialise les opérandes à 0 et
+     * l'opérateur par défaut est l'addition.
      */
     public Calculette() {
         operande1 = operande2 = resultat = 0.0;
@@ -135,6 +136,6 @@ public class Calculette {
      * @return chaîne de caractères représentant le calcul effectué
      */
     public String toString() {
-        return "\n" + operande1 + " " + operateur + " " + operande2 + " =  " + resultat + "\n";
+        return String.format("\n%s %s %s =  %s\n", operande1, operateur, operande2, resultat);
     }
 } // Fin Calculette

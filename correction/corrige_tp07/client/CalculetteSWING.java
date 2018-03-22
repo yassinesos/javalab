@@ -34,19 +34,19 @@ import java.awt.event.WindowListener;
  * la connexion avec le serveur.
  *
  * @author Alain Lebret
- * @version 1.0
+ * @version 1.2
  * @see JFrame
  * @see WindowListener
  * @see ActionListener
  */
 public class CalculetteSWING extends JFrame implements WindowListener, ActionListener {
     /**
-     * objet EmetteurUDP pour transmettre les calculs à effectuer
+     * Objet EmetteurUDP pour transmettre les calculs à effectuer
      */
     private EmetteurUDP emetteurUDP;
 
     /**
-     * objet RecepteurUDP pour recevoir les résultats du calculs à effectuer
+     * Objet RecepteurUDP pour recevoir les résultats du calculs à effectuer
      */
     private RecepteurUDP recepteurUDP;
 

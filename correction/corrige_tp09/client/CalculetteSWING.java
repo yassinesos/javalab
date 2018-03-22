@@ -34,7 +34,7 @@ import java.awt.event.WindowListener;
  * la connexion avec le serveur.
  *
  * @author Alain Lebret
- * @version 1.1
+ * @version 1.3
  * @see JFrame
  * @see WindowListener
  * @see ActionListener
@@ -204,7 +204,7 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
          * Si l'objet dans lequel à eu lieu l'événement est le MenuItem "A Propos"
          */
         if (evt.getSource() == this.miAPropos) {
-            JOptionPane.showMessageDialog(this, "Calculette v. 1.8\nTSII - 2000",
+            JOptionPane.showMessageDialog(this, "Calculette v. 1.9\nTSII - 2000",
                     "A Propos", JOptionPane.PLAIN_MESSAGE);
         }
     }

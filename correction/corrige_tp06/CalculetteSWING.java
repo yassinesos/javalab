@@ -47,14 +47,14 @@ import java.awt.event.WindowListener;
  *   WindowListener : Permet de revevoir les événements concernant les fenêtres.
  *
  * @author Alain Lebret
- * @version 1.0
+ * @version 1.1
  * @see JFrame
  * @see WindowListener
  * @see ActionListener
  */
 public class CalculetteSWING extends JFrame implements WindowListener, ActionListener {
     /**
-     * objet Calculette
+     * Calculette avec sauvegarde
      */
     private CalculetteSauvegarde calculette;
 
@@ -83,7 +83,7 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
         this.getContentPane().add(tfOperation);
         tfOperation.addActionListener(this);
 
-        taResultat = new JTextArea("Calculette - v. 1.5\n", 6, 20);
+        taResultat = new JTextArea("Calculette - v. 1.6\n", 6, 20);
         this.getContentPane().add(taResultat);
         this.addWindowListener(this);
         this.setSize(300, 150);

@@ -79,7 +79,7 @@ public class Fichier
         try
         {
             ObjectInputStream fRo = new ObjectInputStream(new FileInputStream(nom));
-            tmp = (Object) fRo.readObject();
+            tmp = fRo.readObject();
             fRo.close();
         }
         catch (IOException e)

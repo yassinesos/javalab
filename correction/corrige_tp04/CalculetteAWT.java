@@ -22,7 +22,10 @@
  */
 package corrige_tp04;
 
-import java.awt.*;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -52,7 +55,7 @@ import java.awt.event.WindowListener;
  */
 public class CalculetteAWT extends Frame implements WindowListener, ActionListener {
     /**
-     * Calculette associée
+     * Calculette associée capable de stocker 5 opérations
      */
     private Calculette calculette;
 
