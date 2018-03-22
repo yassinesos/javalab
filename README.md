@@ -1,6 +1,6 @@
 ## Introduction à la programmation Java
 
-L'ensemble des documents provient du cours d'introduction à la programmation Java présenté de 1996 à 2007 en BTS Informatique industrielle / IRIS / SNIR. Le répertoire ```divers``` contient quelques codes associés aux TP Java dans lesquels j'interviens à l'ENSICAEN depuis 2016. 
+L'ensemble des documents provient du cours d'introduction à la programmation Java présenté de 1996 à 2007 en BTS informatique industrielle (transformé en BTS IRIS, puis nouvellement en BTS SN-IR). Le répertoire ```divers``` contient quelques codes associés aux TP Java dans lesquels j'interviens à l'ENSICAEN depuis 2016. 
 
 ### Licences
 
