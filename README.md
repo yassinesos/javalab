@@ -17,7 +17,7 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 - :six: [Travailler avec les fichiers - amélioration de la calculette (6)](sujets/tpjava06.md) (_[correction](correction/corrige_tp06)_)
 - :seven: [Travailler en réseau avec UDP - amélioration de la calculette (7)](sujets/tpjava07.md) (_[correction](correction/corrige_tp07)_)
 - :eight: [Travailler en réseau avec TCP - amélioration de la calculette (8)](sujets/tpjava08.md) (_[correction](correction/corrige_tp08)_)
-- :nine: [Utiliser les threads - amélioration de la calculette (9)]()
+- :nine: [Utiliser les threads - amélioration de la calculette (9)](sujets/tpjava09.md) (_[correction](correction/corrige_tp09)_)
 - :keycap_ten: [Lancer une application externe - amélioration de la calculette (10)]()
 
 -----
@@ -41,5 +41,5 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 - :six: [Working with files - improving the simple syntaxic calculator (6)](sujets/tpjava06.md) (_[correction](correction/corrige_tp06)_)
 - :seven: [Networking with UDP - improving the simple syntaxic calculator (7)](sujets/tpjava07.md) (_[correction](correction/corrige_tp07)_)
 - :eight: [Networking with TCP - improving the simple syntaxic calculator (8)](sujets/tpjava08.md) (_[correction](correction/corrige_tp08)_)
-- :nine: [Using threads - improving the simple syntaxic calculator (9)]()
+- :nine: [Using threads - improving the simple syntaxic calculator (9)](sujets/tpjava09.md) (_[correction](correction/corrige_tp09)_)
 - :keycap_ten: [Running an external program - improving the simple syntaxic calculator (10)]()
