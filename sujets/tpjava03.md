@@ -1,6 +1,6 @@
 # TP Java n<sup>o</sup> 3
 
-## Collectionner un nombre fixe d'objets - Amélioration de la Calculette (3)
+## Collectionner un nombre fixe d'objets - amélioration de la Calculette (3)
 
 ### Objectif
 Apprendre à utiliser les tableaux en Java.
