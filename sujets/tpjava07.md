@@ -25,6 +25,7 @@ De la même manière, `CalculetteSauvegarde` se voit associée à deux objets de
 
 ### Conditions
 *   JDK 1.5
+*   2 machines connectées en réseau TCP/IP
 *   Système d'exploitation GNU/Linux, Mac OS X ou Ms-Windows
 *   L'outil de modélisation/génération de code : [ArgoUML](http://argouml-fr.tigris.org/)
 
