@@ -1,4 +1,4 @@
-# TP Java n<sup>o</sup> 6
+# TP Java n<sup>o</sup> 7
 
 ## Travailler en réseau avec UDP - amélioration de la calculette (7)
 
