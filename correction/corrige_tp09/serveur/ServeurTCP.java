@@ -20,11 +20,10 @@
  * limitations under the License.
  *
  */
-package corrige_tp08.serveur;
+package corrige_tp09.serveur;
 
 import java.io.IOException;
 import java.net.ServerSocket;
-import java.net.Socket;
 
 /**
  * Permet de présenter la communication sous TCP - mode Client/Serveur.  Elle utilise :
@@ -33,13 +32,12 @@ import java.net.Socket;
  * ServerSocket : Implémente une écoute réseau du côté serveur, c'est-à-dire
  * un objet attendant la connexion d'un client pour établir
  * une connexion.
- * Socket       : Représente une connexion réseau.
  * System       : Contient plusieurs attributs et méthodes utiles au dialogue
  * avec le system d'exploitation.
  * </PRE>
  *
  * @author Alain Lebret
- * @version 1.0
+ * @version 1.1
  */
 class ServeurTCP {
     /**
@@ -53,26 +51,28 @@ class ServeurTCP {
     ServerSocket receptionniste = null;
 
     /**
-     * Socket de communication
+     * Tableau de Services proposé permettant à plusieurs clients d'effectuer des calculs
      */
-    Socket socket = null;
+    Service[] serviceCalculette;
 
     /**
-     * Service proposé par le serveur
+     * Numéro du service courant
      */
-    Service serviceCalculette = null;
+    int serviceCourant;
 
     /**
      * Constructeur par défaut. Met en route la socket de contrôle.
      *
      * @param unPort port de communication
      */
-    public ServeurTCP(int unPort) {
+    public ServeurTCP(int unPort, int unNombreClients) {
         port = unPort;
+        serviceCalculette = new Service[unNombreClients];
+        serviceCourant = 0;
 
         // Création de la socket de contrôle
         try {
-            System.out.println("ServeurTCP - Serveur démarré");
+            System.out.println("ServeurTCP - Serveur demarre");
             receptionniste = new ServerSocket(port);
         } catch (IOException exc) {
             System.err.println("ServeurTCP:constructeur() - Impossible de démarrer le serveur");
@@ -86,16 +86,24 @@ class ServeurTCP {
     public void ecouter() {
         try {
             System.out.println("ServeurTCP - Attente d'un client...");
-            socket = receptionniste.accept();
+            serviceCalculette[serviceCourant] = new Service(this, receptionniste.accept(), serviceCourant);
             System.out.println("ServeurTCP - Client connecté");
-            serviceCalculette = new Service(socket);
-            while (true) {
-                if (!serviceCalculette.rendreService()) break;
-            }
+            serviceCalculette[serviceCourant].start();
+            System.out.println("ServeurTCP - Service démarré");
+            serviceCourant++;
             System.out.println("ServeurTCP - Service rendu");
-            serviceCalculette.terminer();
         } catch (IOException exc) {
             System.err.println("ServeurTCP:ecouter() - problème de connexion");
         }
     }
+
+    /**
+     * Accession au numéro du service en cours
+     *
+     * @return numéro du service courant
+     */
+    public int getServiceCourant() {
+        return serviceCourant;
+    }
+
 } // Fin ServeurTCP
