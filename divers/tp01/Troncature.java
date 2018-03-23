@@ -1,18 +1,26 @@
 /*
- * Copyright 2017 Alain Lebret.
+ * Java programming laboratory work.
+ *
+ * Copyright (C) 2002-2018 Alain Lebret (alain.lebret@ensicaen.fr)
+ * ENSICAEN
+ * 6 Bd Maréchal Juin
+ * 4000 Caen, France
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
+ *
  */
+package tp01;
 
 import java.math.BigDecimal;
 
@@ -26,10 +34,10 @@ import java.math.BigDecimal;
 public class Troncature {
 
     /**
-     * Troncature en utilisant astucieusement {@code Math.floor} et
+     * tp01.Troncature en utilisant astucieusement {@code Math.floor} et
      * {@code Math.pow}.
      *
-     * @param x Le nombre devant être tronqué
+     * @param x           Le nombre devant être tronqué
      * @param nbDecimales Nombre de décimales conservées par la troncature
      * @return Le nombre tronqué sous forme d'une chaîne de caractères
      * @see java.lang.Math
@@ -48,23 +56,23 @@ public class Troncature {
     }
 
     /**
-     * Troncature en utilisant les propriétés des {@code BigDecimal}.
+     * tp01.Troncature en utilisant les propriétés des {@code BigDecimal}.
      *
-     * @param x Le nombre devant être tronqué
+     * @param x           Le nombre devant être tronqué
      * @param nbDecimales Nombre de décimales conservées par la troncature
      * @return Le nombre tronqué sous forme d'une chaîne de caractères
      * @see java.math.BigDecimal
      */
     public static String tronquer2(final double x, final int nbDecimales) {
         BigDecimal bd = new BigDecimal(String.valueOf(x)).setScale(nbDecimales,
-            BigDecimal.ROUND_DOWN);
+                BigDecimal.ROUND_DOWN);
         return bd.toPlainString();
     }
 
     /**
-     * Troncature en utilisant les propriétés des {@code String}.
+     * tp01.Troncature en utilisant les propriétés des {@code String}.
      *
-     * @param x Le nombre devant être tronqué
+     * @param x           Le nombre devant être tronqué
      * @param nbDecimales Nombre de décimales conservées par la troncature
      * @return Le nombre tronqué sous forme d'une chaîne de caractères
      * @see java.lang.String
@@ -102,7 +110,7 @@ public class Troncature {
             System.out.println(tronquer2(nombre, nbDecimales));
             System.out.println(tronquer3(nombre, nbDecimales));
         } catch (NumberFormatException e) {
-            String message = String.format("Erreur d'écriture ; le premier argument doit être un double et le deuxième un entier positif ou nul");
+            String message = "Erreur d'écriture ; le premier argument doit être un double et le deuxième un entier positif ou nul";
             System.err.println(message);
         }
     }
