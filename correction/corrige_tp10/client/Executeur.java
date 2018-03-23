@@ -47,12 +47,13 @@ public class Executeur {
     /**
      * Sous-processus à exécuter
      */
-    private Process p = null;
+    private Process p;
 
     /**
      * Constructeur par défaut
      */
     public Executeur() {
+        p = null;
     } // fin Constructeur par défaut
 
     /**
