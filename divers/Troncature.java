@@ -102,9 +102,8 @@ public class Troncature {
             System.out.println(tronquer2(nombre, nbDecimales));
             System.out.println(tronquer3(nombre, nbDecimales));
         } catch (NumberFormatException e) {
-            System.out.println("Erreur d'écriture ; le premier argument "
-                + "doit être un double et le deuxième "
-                + "un entier positif ou nul");
+            String message = String.format("Erreur d'écriture ; le premier argument doit être un double et le deuxième un entier positif ou nul");
+            System.err.println(message);
         }
     }
 }

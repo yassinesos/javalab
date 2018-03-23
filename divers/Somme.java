@@ -19,9 +19,7 @@
  * de faire la somme des entiers passés en arguments.
  * @author A. Lebret 
  * @version 1.0 (01/2017)
- */ 
-
-
+ */
 public class Somme {
 	public static void main(String[] args) {
 		int somme = 0;
@@ -30,7 +28,8 @@ public class Somme {
 			try {
 				somme += Integer.valueOf(args[i]);
 			} catch(NumberFormatException e) {
-				System.err.println("Attention, \"" + args[i] + "\" n'est pas un nombre entier !");
+			    String message = String.format("Attention, \"%s\" n'est pas un nombre entier !", args[i]);
+				System.err.println(message);
 			}
 		}
 		System.out.println("Somme = " + somme);
