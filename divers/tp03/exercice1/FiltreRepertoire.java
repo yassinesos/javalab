@@ -20,7 +20,7 @@
  * limitations under the License.
  *
  */
-package tp03;
+package tp03.exercice1;
 
 import java.io.File;
 import java.io.FilenameFilter;

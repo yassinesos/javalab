@@ -20,7 +20,7 @@
  * limitations under the License.
  *
  */
-package tp03;
+package tp03.exercice3;
 
 import java.io.*;
 
