@@ -22,9 +22,9 @@
  */
 package corrige_tp06;
 
+import java.io.Serializable;
 import java.util.Scanner;
 import java.util.regex.Pattern;
-import java.io.Serializable;
 
 /**
  * Définie une opération mathématique de la forme <code>operande1 operateur operande2</code>.

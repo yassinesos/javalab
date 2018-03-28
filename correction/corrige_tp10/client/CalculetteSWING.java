@@ -60,6 +60,10 @@ import java.awt.event.WindowListener;
  */
 public class CalculetteSWING extends JFrame implements WindowListener, ActionListener {
     /**
+     * Indicateur d'OS
+     */
+    static String OS = System.getProperty("os.name").toLowerCase();
+    /**
      * Barre de menus de la CalculetteSWING
      */
     JMenuBar barreMenus = null;
@@ -99,16 +103,10 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
      * Champ de texte chargé de récupérer l'opération
      */
     private JTextField tfOperation;
-
     /**
      * Zone de texte chargée d'afficher les résultats
      */
     private JTextArea taResultat;
-
-    /**
-     * Indicateur d'OS
-     */
-    static String OS = System.getProperty("os.name").toLowerCase();
 
 
     /**
@@ -131,6 +129,22 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
         this.addWindowListener(this);
         this.setSize(300, 150);
         this.setVisible(true);
+    }
+
+    public static boolean isWindows() {
+        return (OS.contains("win"));
+    }
+
+    public static boolean isMac() {
+        return (OS.contains("mac"));
+    }
+
+    public static boolean isUnix() {
+        return (OS.contains("nix") || OS.contains("nux") || OS.indexOf("aix") > 0);
+    }
+
+    public static boolean isSolaris() {
+        return (OS.contains("sunos"));
     }
 
     /**
@@ -263,22 +277,6 @@ public class CalculetteSWING extends JFrame implements WindowListener, ActionLis
 
             executeur.lancer(editeur);
         }
-    }
-
-    public static boolean isWindows() {
-        return (OS.contains("win"));
-    }
-
-    public static boolean isMac() {
-        return (OS.contains("mac"));
-    }
-
-    public static boolean isUnix() {
-        return (OS.contains("nix") || OS.contains("nux") || OS.indexOf("aix") > 0 );
-    }
-
-    public static boolean isSolaris() {
-        return (OS.contains("sunos"));
     }
 
 } // Fin CalculetteSWING

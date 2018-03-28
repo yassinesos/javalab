@@ -26,7 +26,7 @@ import java.io.*;
 
 /**
  * Classe d'essai pour les fichiers binaire. Elle utilise :
- *
+ * <p>
  * DataInputStream        : Permet la lecture de type primitifs Java depuis un flux d'octets.
  * DataOutputStream       : Permet l'écriture de types Java primitifs sur un flux d'octets.
  * FileInputStream        : Flux d'entrée permettant la lecture d'octets depuis

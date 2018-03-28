@@ -26,7 +26,7 @@ import java.io.*;
 
 /**
  * Gestion d'un fichier de sérialisation des objets. Elle utilise :
- *
+ * <p>
  * ClassNotFoundException : Indique qu'une application essaie de charger une
  * classe introuvable.
  * FileInputStream        : Flux d'entrée permettant la lecture d'octets depuis

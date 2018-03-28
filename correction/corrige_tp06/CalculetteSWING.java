@@ -32,19 +32,19 @@ import java.awt.event.WindowListener;
 /**
  * Amélioration de la calculette du TP n4 avec des fonctionnalités graphiques SWING.
  * Elle utilise :
- *
- *   ActionEvent    : Evénement sémantique indiquant une action sur un composant.
- *   ActionListener : Permet de recevoir les événements d'action (ActionEvent).
- *   FlowLayout     : Dispose les composants d'un conteneur de gauche à droite, comme
- *                    les lignes de texte dans un paragraphe.
- *   JFrame         : Version étendue de <code>Frame</code> ajoutant le support d'une couche
- *                    permettant le dessin et la gestion des entrées et des sorties
- *                    au-dessus de la fenêtre et le support de composants gérés par
- *                    strates dans un <code>LayeredPane</code>.
- *   JTextArea      : Zone de texte simple pouvant contenir plusieurs lignes éditables ou non.
- *   JTextField     : Composant léger permettant la saisie d'une ligne de texte.
- *   WindowEvent    : Indique que le statut d'une fenêtre a changé.
- *   WindowListener : Permet de revevoir les événements concernant les fenêtres.
+ * <p>
+ * ActionEvent    : Evénement sémantique indiquant une action sur un composant.
+ * ActionListener : Permet de recevoir les événements d'action (ActionEvent).
+ * FlowLayout     : Dispose les composants d'un conteneur de gauche à droite, comme
+ * les lignes de texte dans un paragraphe.
+ * JFrame         : Version étendue de <code>Frame</code> ajoutant le support d'une couche
+ * permettant le dessin et la gestion des entrées et des sorties
+ * au-dessus de la fenêtre et le support de composants gérés par
+ * strates dans un <code>LayeredPane</code>.
+ * JTextArea      : Zone de texte simple pouvant contenir plusieurs lignes éditables ou non.
+ * JTextField     : Composant léger permettant la saisie d'une ligne de texte.
+ * WindowEvent    : Indique que le statut d'une fenêtre a changé.
+ * WindowListener : Permet de revevoir les événements concernant les fenêtres.
  *
  * @author Alain Lebret
  * @version 1.1

@@ -30,12 +30,14 @@ public class FileCopy {
     private String out;
     private int delay;
     private int numberBytesCopied;
+    private boolean finished;
 
     public FileCopy(String in, String out) {
         this.in = in;
         this.out = out;
         delay = 0;
         numberBytesCopied = 0;
+        finished = false;
     }
 
     public void duplicateFile() throws IOException {
@@ -52,6 +54,7 @@ public class FileCopy {
                 Thread.currentThread().interrupt();
             }
         }
+        finished = true;
         is.close();
         os.close();
     }
@@ -62,5 +65,9 @@ public class FileCopy {
 
     public int getNumberBytesCopied() {
         return numberBytesCopied;
+    }
+
+    public boolean isFinished() {
+        return finished;
     }
 }

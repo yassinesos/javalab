@@ -38,7 +38,7 @@ public class Consommateur implements Runnable {
             int valeur = (int) tampon.prelever();
             System.out.println(nom + " prélève " + valeur);
             try {
-                Thread.sleep((int)(Math.random()*1000));
+                Thread.sleep((int) (Math.random() * 1000));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

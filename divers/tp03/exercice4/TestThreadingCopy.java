@@ -28,7 +28,7 @@ public class TestThreadingCopy {
     public static void main(String[] args) {
         FileCopy fc = new FileCopy("divers/tp03/exercice4/test.txt", "divers/tp03/exercice4/test.cpy.txt");
         fc.setDelay(400);
-        ThreadingCopy tc = new ThreadingCopy("copieur", fc);
+        ThreadingCopy tc = new ThreadingCopy("Copieur", fc);
         tc.start();
         try {
             fc.duplicateFile();

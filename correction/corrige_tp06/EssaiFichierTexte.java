@@ -26,13 +26,13 @@ import java.io.IOException;
 
 /**
  * Classe d'essai pour les fichiers textes. Elle utilise :
- *
+ * <p>
  * IOException : Indique une erreur d'entrée/sortie quelconque.
  * System      : Contient plusieurs attributs et méthodes utiles au
- *               dialogue avec le system d'exploitation.
+ * dialogue avec le system d'exploitation.
  *
- * @version 1.0
  * @author Alain Lebret
+ * @version 1.0
  */
 public class EssaiFichierTexte {
     /**

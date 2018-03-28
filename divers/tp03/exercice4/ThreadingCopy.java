@@ -22,8 +22,6 @@
  */
 package tp03.exercice4;
 
-import java.io.IOException;
-
 public class ThreadingCopy extends Thread {
     FileCopy fc;
     int numberBytesCopied;
@@ -44,14 +42,15 @@ public class ThreadingCopy extends Thread {
 
     @Override
     public void run() {
-        System.out.println("ThreadingCopy - START "+Thread.currentThread().getName());
-        while (true) {
+        System.out.println("ThreadingCopy - START " + Thread.currentThread().getName());
+        while (!fc.isFinished()) {
             displayNumberBytesCopied();
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
         }
         // System.out.println("ThreadingCopy - END "+Thread.currentThread().getName());
     }

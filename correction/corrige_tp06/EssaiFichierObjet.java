@@ -26,14 +26,15 @@ import java.io.IOException;
 
 /**
  * Classe d'essai pour les fichiers d'objets sérialisés. Elle utilise :
- *
+ * <p>
  * ClassNotFoundException : Indique qu'une application essaie de charger une
- *                          classe introuvable.
+ * classe introuvable.
  * IOException            : Indique une erreur d'entrée/sortie quelconque.
  * System                 : Contient plusieurs attributs et méthodes utiles au
- *                          dialogue avec le system d'exploitation.
- * @version 1.0
+ * dialogue avec le system d'exploitation.
+ *
  * @author Alain Lebret
+ * @version 1.0
  */
 public class EssaiFichierObjet {
     /**

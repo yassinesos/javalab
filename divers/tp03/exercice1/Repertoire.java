@@ -23,34 +23,29 @@
 package tp03.exercice1;
 
 import java.io.File;
-import java.io.FilenameFilter;
-import java.util.Scanner;
 
 /**
  * Classe permettant de lister et d'afficher tous les fichiers d'un
- * répertoire ayant une extension particulière.
+ * répertoire.
  */
-public class FiltreRepertoire implements FilenameFilter {
+public class Repertoire {
     /**
-     * Extension des fichiers à lister
+     * Nom du répertoire
      */
-    private String extension;
+    private String nom;
 
-    public FiltreRepertoire(String extension) {
-        this.extension = extension;
+    public Repertoire(String nom) {
+        this.nom = nom;
     }
 
     public static void main(String[] args) {
-        FiltreRepertoire fr = new FiltreRepertoire("java");
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Entrer un nom de répertoire : ");
-        String r = sc.next();
-        String[] liste = fr.parcourir(r);
+        Repertoire fr = new Repertoire("divers/tp03/exercice1");
+        String[] liste = fr.parcourir();
         fr.afficher(liste);
     }
 
-    public String[] parcourir(String nomRepertoire) {
-        File repertoire = new File(nomRepertoire);
+    public String[] parcourir() {
+        File repertoire = new File(nom);
         String[] fichiers = null;
 
         if (repertoire.isDirectory()) {
@@ -65,14 +60,5 @@ public class FiltreRepertoire implements FilenameFilter {
                 System.out.println(fichier);
             }
         }
-    }
-
-    @Override
-    public boolean accept(File repertoire, String fichier) {
-        boolean hasJavaExtension = false;
-        if (fichier.endsWith(extension)) {
-            hasJavaExtension = true;
-        }
-        return hasJavaExtension;
     }
 }

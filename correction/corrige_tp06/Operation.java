@@ -25,7 +25,7 @@ package corrige_tp06;
 /**
  * Définie une opération sous forme de chaine de caractères. Permet d'introduire la
  * notion d'héritage ainsi que de l'encapsulation. Elle utilise :
- *
+ * <p>
  * String : Représente une chaîne de caractères dont le contenu ne
  * peut être modifié.
  *

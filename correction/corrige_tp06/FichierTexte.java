@@ -27,7 +27,7 @@ import java.io.*;
 
 /**
  * Gestion d'un fichier Texte. Elle utilise :
- *
+ * <p>
  * BufferedReader : Flux d'entrée de caractères pourvu d'une mémoire tampon
  * afin d'optimiser la lecture de caractères isolés, de
  * tableaux et de chaînes de caractères.
