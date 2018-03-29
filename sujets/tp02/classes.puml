@@ -1,0 +1,29 @@
+@startuml
+
+class Operation {
+    private String operation;
+
+    public Operation(); 
+    public String getOperation();
+    public void setOperation(String operation);
+}
+
+class OperationMathematique {
+    private double resultat;
+
+    public OperationMathematique();
+    public void resoudre(String uneOperation) throws OperationException;
+    public String toString();
+} 
+
+class Calculette {
+
+    public Calculette();
+    public void calculer(String operation);
+    public String toString();
+} 
+
+Operation <|-down- OperationMathematique: Inheritance
+Calculette "1" *-up- "1" OperationMathematique: operation
+
+@enduml
