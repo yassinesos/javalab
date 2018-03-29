@@ -53,7 +53,7 @@ class ServeurTCP {
     /**
      * Tableau de Services proposé permettant à plusieurs clients d'effectuer des calculs
      */
-    Service[] serviceCalculette;
+    Service[] servicesCalculette;
 
     /**
      * Numéro du service courant
@@ -67,7 +67,7 @@ class ServeurTCP {
      */
     public ServeurTCP(int unPort, int unNombreClients) {
         port = unPort;
-        serviceCalculette = new Service[unNombreClients];
+        servicesCalculette = new Service[unNombreClients];
         serviceCourant = 0;
 
         // Création de la socket de contrôle
@@ -86,9 +86,9 @@ class ServeurTCP {
     public void ecouter() {
         try {
             System.out.println("ServeurTCP - Attente d'un client...");
-            serviceCalculette[serviceCourant] = new Service(this, receptionniste.accept(), serviceCourant);
+            servicesCalculette[serviceCourant] = new Service(this, receptionniste.accept(), serviceCourant);
             System.out.println("ServeurTCP - Client connecté");
-            serviceCalculette[serviceCourant].start();
+            servicesCalculette[serviceCourant].start();
             System.out.println("ServeurTCP - Service démarré");
             serviceCourant++;
             System.out.println("ServeurTCP - Service rendu");
