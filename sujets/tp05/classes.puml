@@ -1,0 +1,59 @@
+@startuml
+
+class Operation {
+    private String operation;
+
+    public Operation(); 
+    public String getOperation();
+    public void setOperation(String operation);
+}
+
+class OperationMathematique {
+    private double resultat;
+
+    public OperationMathematique();
+    public void resoudre(String uneOperation) throws OperationException;
+    public String toString();
+} 
+
+class Calculette {
+    private int compteur;
+
+    public Calculette();
+    public void calculer(String operation);
+    public String toString();
+} 
+
+interface WindowListener {
+}
+
+interface ActionListener{
+}
+
+class JFrame {
+}
+
+class CalculetteSWING {
+    private Calculette calculette;
+    private JTextField tfOperation;
+    private JTextArea taResultat;
+
+    public CalculetteSWING();
+    public void windowActivated(WindowEvent evt);
+    public void windowDeactivated(WindowEvent evt);
+    public void windowClosed(WindowEvent evt);
+    public void windowClosing(WindowEvent evt);
+    public void windowIconified(WindowEvent evt);
+    public void windowDeiconified(WindowEvent evt);
+    public void windowOpened(WindowEvent evt);
+    public void actionPerformed(ActionEvent evt);
+} 
+
+Operation <|-down- OperationMathematique: Inheritance
+Calculette "1" *-up- "*" OperationMathematique: operations
+CalculetteSWING "1" *-up- "1" Calculette: calculette
+JFrame <|-down- CalculetteSWING: Inheritance
+WindowListener <|-down- CalculetteSWING: Inheritance
+ActionListener <|-down- CalculetteSWING: Inheritance
+
+@enduml
