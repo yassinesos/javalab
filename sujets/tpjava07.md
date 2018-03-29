@@ -15,13 +15,13 @@ Tester les classes `EmetteurUDP` et `RecepteurUDP` sur deux machines distinctes 
 
 **2\. Amélioration de la Calculette (7)**
 
-On se propose de reprendre la calculette du TP précédent pour déporter le calcul sur une machine distante. Ainsi, `CalculetteSwing` est désassociée de `CalculetteSauvegarde` et se voit associée à deux objets de type `EmetteurUDP` et `RecepteurUDP` comme le montre le diagramme de classes suivant :
+On se propose de reprendre la calculette du TP précédent pour déporter le calcul sur une machine distante. Ainsi, `CalculetteSwing` est désassociée de `CalculetteSauvegarde` et se voit composée des  classes `EmetteurUDP` et `RecepteurUDP` comme le montre le diagramme de classes suivant :
 
-![Diagramme de classes 1](tp07/dia_classes1.png)
+![Diagramme de classes 1](tp07/classes1.png)
 
-De la même manière, `CalculetteSauvegarde` se voit associée à deux objets de type `EmetteurUDP` et `RecepteurUDP` pour répondre aux demandes de CalculetteSWING, comme le montre le diagramme de classes suivant :
+De la même manière, `CalculetteSauvegarde` se voit composée des classes `EmetteurUDP` et `RecepteurUDP` pour répondre aux demandes de CalculetteSWING, comme le montre le diagramme de classes suivant :
 
-![Diagramme de classes 2](tp07/dia_classes2.png)
+![Diagramme de classes 2](tp07/classes2.png)
 
 ### Conditions
 *   JDK 1.5
