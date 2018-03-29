@@ -1,0 +1,44 @@
+@startuml
+
+interface WindowListener {
+}
+
+interface ActionListener{
+}
+
+class JFrame {
+}
+
+class CalculetteSWING {
+    private JTextField tfOperation;
+    private JTextArea taResultat;
+
+    public CalculetteSWING();
+    public void windowActivated(WindowEvent evt);
+    public void windowDeactivated(WindowEvent evt);
+    public void windowClosed(WindowEvent evt);
+    public void windowClosing(WindowEvent evt);
+    public void windowIconified(WindowEvent evt);
+    public void windowDeiconified(WindowEvent evt);
+    public void windowOpened(WindowEvent evt);
+    public void actionPerformed(ActionEvent evt);
+} 
+
+class ClientTCP {
+    private int port;
+    private Socket socket;
+    private ObjectOutputStream sortie;
+    private ObjectInputStream entree;
+
+    public ClientTCP(int unPort);
+    public void connecter(String unServeur);
+    public String requeter(String uneRequete);
+    public void deconnecter();
+}
+
+CalculetteSWING "1" *-down- "1" ClientTCP: clientTCP
+JFrame <|-down- CalculetteSWING: Inheritance
+WindowListener <|-down- CalculetteSWING: Inheritance
+ActionListener <|-down- CalculetteSWING: Inheritance
+
+@enduml
