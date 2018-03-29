@@ -14,11 +14,11 @@ Cours - Java et les réseaux
 
 On se propose de reprendre la calculette du TP N<sup>o</sup>6 afin de déporter le calcul sur une machine distante. On pourra côté serveur suivre le diagramme de classes suivant :
 
-![Diagramme de classes côté serveur](tp08/dia_classes1.png)
+![Diagramme de classes côté serveur](tp08/classes1.png)
 
 Et côté client, suivre :
 
-![Diagramme de classes côté client](tp08/dia_classes2.png)
+![Diagramme de classes côté client](tp08/classes2.png)
 
 ### Conditions
 *   JDK 1.5
