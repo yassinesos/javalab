@@ -1,0 +1,64 @@
+@startuml
+
+class Operation {
+    private String operation;
+
+    public Operation(); 
+    public String getOperation();
+    public void setOperation(String operation);
+}
+
+class OperationMathematique {
+    private double resultat;
+
+    public OperationMathematique();
+    public void resoudre(String uneOperation) throws OperationException;
+    public String toString();
+} 
+
+class Calculette {
+    private int compteur;
+
+    public Calculette();
+    public void calculer(String operation);
+    public String toString();
+} 
+
+class CalculetteSauvegarde {
+    public CalculetteSauvegarde(int uneTaille);
+    public void sauvegarder();
+}
+
+class FichierTexte {
+    private BufferedWriter fW;
+    private BufferedReader fR;
+    private char mode;
+
+    public void ouvrir(String nomDuFichier, String s) throws IOException;
+    public void fermer() throws IOException;
+    public String lire() throws IOException;
+    public void ecrire(String s) throws IOException;
+}
+
+class EmetteurUDP {
+    private int port;
+
+    public EmetteurUDP(int unPort);
+    public void envoyer(String destinataire, String mes);
+}
+
+class RecepteurUDP {
+    private int port;
+
+    public RecepteurUDP(int unPort);
+    public String recevoir();
+}
+
+Operation <|-down- OperationMathematique: Inheritance
+Calculette "1" *-up- "*" OperationMathematique: operations
+CalculetteSauvegarde "1" *-up- "1" FichierTexte: ft
+Calculette <|-down- CalculetteSauvegarde: Inheritance
+CalculetteSauvegarde "1" *-up- "1" EmetteurUDP: emetteur
+CalculetteSauvegarde "1" *-up- "1" RecepteurUDP: recepteur
+
+@enduml

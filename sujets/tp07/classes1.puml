@@ -1,0 +1,47 @@
+@startuml
+
+interface WindowListener {
+}
+
+interface ActionListener{
+}
+
+class JFrame {
+}
+
+class CalculetteSWING {
+    private JTextField tfOperation;
+    private JTextArea taResultat;
+
+    public CalculetteSWING();
+    public void windowActivated(WindowEvent evt);
+    public void windowDeactivated(WindowEvent evt);
+    public void windowClosed(WindowEvent evt);
+    public void windowClosing(WindowEvent evt);
+    public void windowIconified(WindowEvent evt);
+    public void windowDeiconified(WindowEvent evt);
+    public void windowOpened(WindowEvent evt);
+    public void actionPerformed(ActionEvent evt);
+} 
+
+class EmetteurUDP {
+    private int port;
+
+    public EmetteurUDP(int unPort);
+    public void envoyer(String destinataire, String mes);
+}
+
+class RecepteurUDP {
+    private int port;
+
+    public RecepteurUDP(int unPort);
+    public String recevoir();
+}
+
+CalculetteSWING "1" *-up- "1" EmetteurUDP: emetteur
+CalculetteSWING "1" *-up- "1" RecepteurUDP: recepteur
+JFrame <|-down- CalculetteSWING: Inheritance
+WindowListener <|-down- CalculetteSWING: Inheritance
+ActionListener <|-down- CalculetteSWING: Inheritance
+
+@enduml
