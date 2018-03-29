@@ -14,7 +14,9 @@ On se propose de reprendre la calculette du TP précédent. On souhaite que cett
 
 ![IHM](tp05/calculette.png)
 
-Utiliser les classes `Calculette`, `Operation` et `OperationMathematique` sans les modifier afin de profiter des avantages de la programmation objet, puis créer une nouvelle classe nommée `CalculetteSWING` héritant cette fois-ci de `JFrame`, et utilisant la classe `Calculette`.
+Utiliser les classes `Calculette`, `Operation` et `OperationMathematique` sans les modifier afin de profiter des avantages de la programmation objet, puis créer une nouvelle classe nommée `CalculetteSWING` héritant cette fois-ci de `JFrame`, et utilisant la classe `Calculette` comme l'indique le diagramme de classes suivant.
+
+![Diagramme de classes](tp05/classes.png)
 
 Facultatif : améliorer l'ergonomie de l'interface graphique.
 
