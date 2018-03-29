@@ -14,7 +14,7 @@ Cours - Utiliser les _threads_ en Java
 
 On se propose de reprendre la calculette précédente. Dans celle-ci, un client distant peut demander la résolution d'une opération au serveur. Nous souhaitons rajouter la gestion de plusieurs clients à la fois en modifiant la classe `Service` de manière à ce que celle-ci hérite de la classe `java.lang.Thread`. Il sera nécessaire de modifier aussi la classe `ServeurTCP` comme l'indique le diagramme de classes côté serveur suivant :
 
-![Diagramme de classes côté serveur](tp09/dia_classes1.png)
+![Diagramme de classes côté serveur](tp09/classes1.png)
 
 ### Conditions
 *   JDK 1.5
