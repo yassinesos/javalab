@@ -4,7 +4,7 @@ L'ensemble des documents provient du cours d'introduction à la programmation Ja
 
 ### Licences
 
-* Les documents (cours, sujets de travaux pratiques et images) sont fournis sous licence Creative Commons [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
+* Les documents (cours, sujets de travaux pratiques et images<sup>[1]</sup>) sont fournis sous licence Creative Commons [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
 
 * Les éléments de solutions et les exemples de code sont quant à eux proposés sous licence [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -28,7 +28,7 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 
 ### Licensing
 
-* The documents (courses, laboratory work handouts and images) are provided under the Creative Commons [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
+* The documents (courses, laboratory work handouts and images<sup>[1]</sup>) are provided under the Creative Commons [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) 
 
 * The code samples are licensed under the [Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0) license [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
@@ -43,3 +43,6 @@ All the documents come from my course presented from 1996 to 2007. The folder ``
 - :eight: [Networking with TCP - improving the simple syntaxic calculator (8)](sujets/tpjava08.md) (_[correction](correction/corrige_tp08)_)
 - :nine: [Using threads - improving the simple syntaxic calculator (9)](sujets/tpjava09.md) (_[correction](correction/corrige_tp09)_)
 - :keycap_ten: [Running an external program - improving the simple syntaxic calculator (10)](sujets/tpjava10.md) (_[correction](correction/corrige_tp10)_)
+
+[1] : les diagrammes UML ont été réalisés à l'aide de l'outil en ligne [plantext](https://www.planttext.com) /
+UML diagrams UML have been created using [plantext](https://www.planttext.com).  
