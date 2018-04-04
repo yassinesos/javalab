@@ -15,8 +15,8 @@ On se propose de reprendre la calculette du TP précédent en dégageant la noti
 ![Diagramme de classes](tp02/classes.png)
 
 ### Conditions
-*   JDK 1.5
-*   Système d'exploitation GNU/Linux, Mac OS X ou Ms-Windows
+*   JDK 1.8
+*   Système d'exploitation Linux, Mac OS X ou Ms-Windows
 *   L'outil de modélisation/génération de code : [ArgoUML](http://argouml-fr.tigris.org/)
 
 ### Critères d'évaluation

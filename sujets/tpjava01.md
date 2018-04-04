@@ -27,8 +27,8 @@ Voici quelques exemples de chaînes de caractères :
 La chaîne de caractères "fin" permet de quitter l'application par un appel à la méthode `System.exit(0)`.
 
 ### Conditions
-*   JDK 1.5
-*   Système d'exploitation GNU/Linux, Mac OS X ou Ms-Windows
+*   JDK 1.8
+*   Système d'exploitation Linux, Mac OS X ou Ms-Windows
 *   Les documentations des classes [String](https://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html) et [Scanner](https://docs.oracle.com/javase/1.5.0/docs/api/java/util/Scanner.html)
 
 ### Critères d'évaluation

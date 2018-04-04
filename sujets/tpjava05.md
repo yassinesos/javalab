@@ -21,8 +21,8 @@ Utiliser les classes `Calculette`, `Operation` et `OperationMathematique` sans l
 Facultatif : améliorer l'ergonomie de l'interface graphique.
 
 ### Conditions
-*   JDK 1.5
-*   Système d'exploitation GNU/Linux, Mac OS X ou Ms-Windows
+*   JDK 1.8
+*   Système d'exploitation Linux, Mac OS X ou Ms-Windows
 *   L'outil de modélisation/génération de code : [ArgoUML](http://argouml-fr.tigris.org/)
 
 ### Critères d'évaluation

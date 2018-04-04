@@ -17,9 +17,9 @@ On se propose de reprendre la calculette précédente. Dans celle-ci, un client 
 ![Diagramme de classes côté serveur](tp09/classes1.png)
 
 ### Conditions
-*   JDK 1.5
+*   JDK 1.8
 *   2 machines connectées en réseau TCP/IP
-*   Système d'exploitation GNU/Linux, Mac OS X ou Ms-Windows
+*   Système d'exploitation Linux, Mac OS X ou Ms-Windows
 *   L'outil de modélisation/génération de code : [ArgoUML](http://argouml-fr.tigris.org/)
 
 ### Critères d'évaluation

@@ -23,8 +23,8 @@ créer une nouvelle classe nommée `CalculetteAWT` et utilisant la classe `Calcu
 Facultatif : améliorer l'ergonomie de l'interface graphique ainsi que sa structure, en déléguant par exemple la gestion des événements à une autre classe.
 
 ### Conditions
-*   JDK 1.5
-*   Système d'exploitation GNU/Linux, Mac OS X ou Ms-Windows
+*   JDK 1.8
+*   Système d'exploitation Linux, Mac OS X ou Ms-Windows
 *   L'outil de modélisation/génération de code : [ArgoUML](http://argouml-fr.tigris.org/)
 
 ### Critères d'évaluation
