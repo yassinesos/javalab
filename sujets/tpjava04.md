@@ -16,7 +16,10 @@ du type minimal fourni ci-après.
 ![IHM AWT minimale](tp04/calculette.png)
 
 Utiliser les classes `Calculette`, `Operation` et `OperationMathematique` sans les modifier afin de profiter des avantages de la programmation objet, puis 
-créer une nouvelle classe nommée `CalculetteAWT` et utilisant la classe `Calculette`. Le diagramme de classes correspondant respectera la forme suivante :
+créer une nouvelle classe nommée `CalculetteAWT` et utilisant la classe `Calculette`. 
+Dans un premier temps on laissera de côté la réalisation d'une interface qui respecte des
+patrons de conception tels que [MVC](https://en.wikipedia.org/wiki/Model–view–controller) ou [MVP](https://en.wikipedia.org/wiki/Model–view–presenter). 
+Le diagramme de classes correspondant respectera la forme suivante :
 
 ![Diagramme de classes](tp04/classes.png)
 
